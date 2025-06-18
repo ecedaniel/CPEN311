@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu May 22 09:18:56 2025
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : LED_ping_pong
+Top-level Entity Name : LED_ping_pong
+Family : Cyclone II
+Total logic elements : 16
+    Total combinational functions : 15
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

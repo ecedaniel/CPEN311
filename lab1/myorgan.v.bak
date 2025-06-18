@@ -1,0 +1,112 @@
+module myorgan(input CLK_50M, input [7:0] SW, output reg Sample_Clk_Signal, 
+				 output myclock_1Hz, output wire myclock_523Hz, output myclock_587Hz, output myclock_659Hz, 
+				 output myclock_698Hz, output myclock_783Hz, output myclock_880Hz, output myclock_987Hz, 
+				 output myclock_1046Hz); 
+
+myclockdivider 
+Generate_523Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'hBAB9),
+.Reset(~1'h1),
+.outclk(myclock_523Hz),
+.outclk_Not()); 
+
+myclockdivider
+Generate_587Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'hA65D),
+.Reset(~1'h1),
+.outclk(myclock_587Hz),
+.outclk_Not()
+);
+
+myclockdivider
+Generate_659Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'h9430),
+.Reset(~1'h1),
+.outclk(myclock_659Hz),
+.outclk_Not()
+);
+
+myclockdivider
+Generate_698Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'h8BE9),
+.Reset(~1'h1),
+.outclk(myclock_698Hz),
+.outclk_Not()
+);
+
+myclockdivider
+Generate_783Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'h7CB8),
+.Reset(~1'h1),
+.outclk(myclock_783Hz),
+.outclk_Not()
+);
+
+myclockdivider
+Generate_880Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'h6EF9),
+.Reset(~1'h1),
+.outclk(myclock_880Hz),
+.outclk_Not()
+);
+  
+myclockdivider
+Generate_987Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'h62F1),
+.Reset(~1'h1),
+.outclk(myclock_987Hz),
+.outclk_Not()
+);
+
+myclockdivider
+Generate_1046Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'h5D5D),
+.Reset(~1'h1),
+.outclk(myclock_1046Hz),
+.outclk_Not()
+);  
+
+myclockdivider
+Generate_1Hz_clk
+(
+.inclk(CLK_50M),
+.div_clk_count(32'h17D_7840),
+.Reset(~1'h1),
+.outclk(myclock_1Hz),
+.outclk_Not()
+);  
+
+//assign Sample_Clk_Signal = Clock_1KHz;
+//assign Sample_Clk_Signal = myclock_1kHz;
+always@(*) begin
+	case(SW[3:0]) 
+		4'b0001: Sample_Clk_Signal = myclock_523Hz;
+		4'b0011: Sample_Clk_Signal = myclock_587Hz;
+		4'b0101: Sample_Clk_Signal = myclock_659Hz;
+		4'b0111: Sample_Clk_Signal = myclock_698Hz;
+		4'b1001: Sample_Clk_Signal = myclock_783Hz;
+		4'b1011: Sample_Clk_Signal = myclock_880Hz;
+		4'b1101: Sample_Clk_Signal = myclock_987Hz;
+		4'b1111: Sample_Clk_Signal = myclock_1046Hz;
+		default: Sample_Clk_Signal = 1'b0;
+	endcase
+end	
+
+endmodule
+

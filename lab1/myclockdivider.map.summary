@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu May 22 07:12:05 2025
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : myclockdivider
+Top-level Entity Name : myclockdivider
+Family : Cyclone II
+Total logic elements : 66
+    Total combinational functions : 66
+    Dedicated logic registers : 33
+Total registers : 33
+Total pins : 36
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

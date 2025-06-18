@@ -1,0 +1,814 @@
+Simulator report for myorgan
+Thu May 22 18:09:47 2025
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 ms      ;
+; Simulation Netlist Size     ; 471 nodes    ;
+; Simulation Coverage         ;      59.74 % ;
+; Total Number of Transitions ; 13052551     ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      59.74 % ;
+; Total nodes checked                                 ; 471          ;
+; Total output ports checked                          ; 467          ;
+; Total output ports with complete 1/0-value coverage ; 279          ;
+; Total output ports with no 1/0-value coverage       ; 184          ;
+; Total output ports with no 1-value coverage         ; 184          ;
+; Total output ports with no 0-value coverage         ; 188          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                      ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; Node Name                                             ; Output Port Name                                      ; Output Port Type ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; |myorgan|WideOr0                                      ; |myorgan|WideOr0                                      ; out0             ;
+; |myorgan|WideOr1                                      ; |myorgan|WideOr1                                      ; out0             ;
+; |myorgan|WideOr2                                      ; |myorgan|WideOr2                                      ; out0             ;
+; |myorgan|WideOr3                                      ; |myorgan|WideOr3                                      ; out0             ;
+; |myorgan|WideOr4                                      ; |myorgan|WideOr4                                      ; out0             ;
+; |myorgan|WideOr5                                      ; |myorgan|WideOr5                                      ; out0             ;
+; |myorgan|WideOr6                                      ; |myorgan|WideOr6                                      ; out0             ;
+; |myorgan|WideOr7                                      ; |myorgan|WideOr7                                      ; out0             ;
+; |myorgan|WideOr8                                      ; |myorgan|WideOr8                                      ; out0             ;
+; |myorgan|WideOr9                                      ; |myorgan|WideOr9                                      ; out0             ;
+; |myorgan|clockdiv[2]                                  ; |myorgan|clockdiv[2]                                  ; out0             ;
+; |myorgan|WideOr10                                     ; |myorgan|WideOr10                                     ; out0             ;
+; |myorgan|CLK_50M                                      ; |myorgan|CLK_50M                                      ; out              ;
+; |myorgan|SW[1]                                        ; |myorgan|SW[1]                                        ; out              ;
+; |myorgan|SW[2]                                        ; |myorgan|SW[2]                                        ; out              ;
+; |myorgan|Sample_Clk_Signal                            ; |myorgan|Sample_Clk_Signal                            ; pin_out          ;
+; |myorgan|myclock                                      ; |myorgan|myclock                                      ; pin_out          ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~14   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~14   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~15   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~15   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~16   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~16   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~17   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~17   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~18   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~18   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~19   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~19   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~20   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~20   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~21   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~21   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~22   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~22   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~23   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~23   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~24   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~24   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~25   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~25   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~26   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~26   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~27   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~27   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~28   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~28   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~29   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~29   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~30   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~30   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~31   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~31   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[0]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[0]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[1]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[1]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[2]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[2]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[3]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[3]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[4]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[4]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[5]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[5]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[6]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[6]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[7]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[7]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[8]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[8]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[9]   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[9]   ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[10]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[10]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[11]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[11]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[12]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[12]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[13]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[13]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[14]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[14]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[15]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[15]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[16]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[16]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[17]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[17]  ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter~16       ; |myorgan|myclockdivider:Generate_clk|counter~16       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~17       ; |myorgan|myclockdivider:Generate_clk|counter~17       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~18       ; |myorgan|myclockdivider:Generate_clk|counter~18       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~19       ; |myorgan|myclockdivider:Generate_clk|counter~19       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~20       ; |myorgan|myclockdivider:Generate_clk|counter~20       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~21       ; |myorgan|myclockdivider:Generate_clk|counter~21       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~22       ; |myorgan|myclockdivider:Generate_clk|counter~22       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~23       ; |myorgan|myclockdivider:Generate_clk|counter~23       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~24       ; |myorgan|myclockdivider:Generate_clk|counter~24       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~25       ; |myorgan|myclockdivider:Generate_clk|counter~25       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~26       ; |myorgan|myclockdivider:Generate_clk|counter~26       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~27       ; |myorgan|myclockdivider:Generate_clk|counter~27       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~28       ; |myorgan|myclockdivider:Generate_clk|counter~28       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~29       ; |myorgan|myclockdivider:Generate_clk|counter~29       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~30       ; |myorgan|myclockdivider:Generate_clk|counter~30       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~31       ; |myorgan|myclockdivider:Generate_clk|counter~31       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|outclk~0         ; |myorgan|myclockdivider:Generate_clk|outclk~0         ; out              ;
+; |myorgan|myclockdivider:Generate_clk|outclk           ; |myorgan|myclockdivider:Generate_clk|outclk           ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[0]       ; |myorgan|myclockdivider:Generate_clk|counter[0]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[1]       ; |myorgan|myclockdivider:Generate_clk|counter[1]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[2]       ; |myorgan|myclockdivider:Generate_clk|counter[2]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[3]       ; |myorgan|myclockdivider:Generate_clk|counter[3]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[4]       ; |myorgan|myclockdivider:Generate_clk|counter[4]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[5]       ; |myorgan|myclockdivider:Generate_clk|counter[5]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[6]       ; |myorgan|myclockdivider:Generate_clk|counter[6]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[7]       ; |myorgan|myclockdivider:Generate_clk|counter[7]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[8]       ; |myorgan|myclockdivider:Generate_clk|counter[8]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[9]       ; |myorgan|myclockdivider:Generate_clk|counter[9]       ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[10]      ; |myorgan|myclockdivider:Generate_clk|counter[10]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[11]      ; |myorgan|myclockdivider:Generate_clk|counter[11]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[12]      ; |myorgan|myclockdivider:Generate_clk|counter[12]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[13]      ; |myorgan|myclockdivider:Generate_clk|counter[13]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[14]      ; |myorgan|myclockdivider:Generate_clk|counter[14]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[15]      ; |myorgan|myclockdivider:Generate_clk|counter[15]      ; regout           ;
+; |myorgan|Decoder2~1                                   ; |myorgan|Decoder2~1                                   ; out0             ;
+; |myorgan|Decoder3~1                                   ; |myorgan|Decoder3~1                                   ; out0             ;
+; |myorgan|Decoder4~1                                   ; |myorgan|Decoder4~1                                   ; out0             ;
+; |myorgan|Decoder5~0                                   ; |myorgan|Decoder5~0                                   ; out0             ;
+; |myorgan|Decoder5~1                                   ; |myorgan|Decoder5~1                                   ; out0             ;
+; |myorgan|Decoder6~1                                   ; |myorgan|Decoder6~1                                   ; out0             ;
+; |myorgan|Decoder6~2                                   ; |myorgan|Decoder6~2                                   ; out0             ;
+; |myorgan|Decoder7~0                                   ; |myorgan|Decoder7~0                                   ; out0             ;
+; |myorgan|Decoder8~1                                   ; |myorgan|Decoder8~1                                   ; out0             ;
+; |myorgan|Decoder9~0                                   ; |myorgan|Decoder9~0                                   ; out0             ;
+; |myorgan|Decoder9~1                                   ; |myorgan|Decoder9~1                                   ; out0             ;
+; |myorgan|Decoder10~1                                  ; |myorgan|Decoder10~1                                  ; out0             ;
+; |myorgan|Decoder10~2                                  ; |myorgan|Decoder10~2                                  ; out0             ;
+; |myorgan|Decoder11~1                                  ; |myorgan|Decoder11~1                                  ; out0             ;
+; |myorgan|Decoder11~2                                  ; |myorgan|Decoder11~2                                  ; out0             ;
+; |myorgan|Decoder12~1                                  ; |myorgan|Decoder12~1                                  ; out0             ;
+; |myorgan|Decoder12~2                                  ; |myorgan|Decoder12~2                                  ; out0             ;
+; |myorgan|Decoder13~0                                  ; |myorgan|Decoder13~0                                  ; out0             ;
+; |myorgan|Decoder14~1                                  ; |myorgan|Decoder14~1                                  ; out0             ;
+; |myorgan|Decoder14~2                                  ; |myorgan|Decoder14~2                                  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~0  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~0  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~1  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~1  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~2  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~2  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~3  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~3  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~4  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~4  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~5  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~5  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~6  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~6  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~7  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~7  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~8  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~8  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~9  ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~9  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~10 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~10 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~11 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~11 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~12 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~12 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~13 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~13 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~14 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~14 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~15 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~15 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~16 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~16 ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~0      ; |myorgan|myclockdivider:Generate_clk|LessThan0~0      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~1      ; |myorgan|myclockdivider:Generate_clk|LessThan0~1      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~2      ; |myorgan|myclockdivider:Generate_clk|LessThan0~2      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~3      ; |myorgan|myclockdivider:Generate_clk|LessThan0~3      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~4      ; |myorgan|myclockdivider:Generate_clk|LessThan0~4      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~5      ; |myorgan|myclockdivider:Generate_clk|LessThan0~5      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~6      ; |myorgan|myclockdivider:Generate_clk|LessThan0~6      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~7      ; |myorgan|myclockdivider:Generate_clk|LessThan0~7      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~8      ; |myorgan|myclockdivider:Generate_clk|LessThan0~8      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~9      ; |myorgan|myclockdivider:Generate_clk|LessThan0~9      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~10     ; |myorgan|myclockdivider:Generate_clk|LessThan0~10     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~11     ; |myorgan|myclockdivider:Generate_clk|LessThan0~11     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~12     ; |myorgan|myclockdivider:Generate_clk|LessThan0~12     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~13     ; |myorgan|myclockdivider:Generate_clk|LessThan0~13     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~14     ; |myorgan|myclockdivider:Generate_clk|LessThan0~14     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~15     ; |myorgan|myclockdivider:Generate_clk|LessThan0~15     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~16     ; |myorgan|myclockdivider:Generate_clk|LessThan0~16     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~17     ; |myorgan|myclockdivider:Generate_clk|LessThan0~17     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~18     ; |myorgan|myclockdivider:Generate_clk|LessThan0~18     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~19     ; |myorgan|myclockdivider:Generate_clk|LessThan0~19     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~20     ; |myorgan|myclockdivider:Generate_clk|LessThan0~20     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~21     ; |myorgan|myclockdivider:Generate_clk|LessThan0~21     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~22     ; |myorgan|myclockdivider:Generate_clk|LessThan0~22     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~23     ; |myorgan|myclockdivider:Generate_clk|LessThan0~23     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~24     ; |myorgan|myclockdivider:Generate_clk|LessThan0~24     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~25     ; |myorgan|myclockdivider:Generate_clk|LessThan0~25     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~26     ; |myorgan|myclockdivider:Generate_clk|LessThan0~26     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~27     ; |myorgan|myclockdivider:Generate_clk|LessThan0~27     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~28     ; |myorgan|myclockdivider:Generate_clk|LessThan0~28     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~29     ; |myorgan|myclockdivider:Generate_clk|LessThan0~29     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~30     ; |myorgan|myclockdivider:Generate_clk|LessThan0~30     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~31     ; |myorgan|myclockdivider:Generate_clk|LessThan0~31     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~32     ; |myorgan|myclockdivider:Generate_clk|LessThan0~32     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~33     ; |myorgan|myclockdivider:Generate_clk|LessThan0~33     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~34     ; |myorgan|myclockdivider:Generate_clk|LessThan0~34     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~35     ; |myorgan|myclockdivider:Generate_clk|LessThan0~35     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~36     ; |myorgan|myclockdivider:Generate_clk|LessThan0~36     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~37     ; |myorgan|myclockdivider:Generate_clk|LessThan0~37     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~38     ; |myorgan|myclockdivider:Generate_clk|LessThan0~38     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~39     ; |myorgan|myclockdivider:Generate_clk|LessThan0~39     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~40     ; |myorgan|myclockdivider:Generate_clk|LessThan0~40     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~41     ; |myorgan|myclockdivider:Generate_clk|LessThan0~41     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~42     ; |myorgan|myclockdivider:Generate_clk|LessThan0~42     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~43     ; |myorgan|myclockdivider:Generate_clk|LessThan0~43     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~44     ; |myorgan|myclockdivider:Generate_clk|LessThan0~44     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~45     ; |myorgan|myclockdivider:Generate_clk|LessThan0~45     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~46     ; |myorgan|myclockdivider:Generate_clk|LessThan0~46     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~47     ; |myorgan|myclockdivider:Generate_clk|LessThan0~47     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~48     ; |myorgan|myclockdivider:Generate_clk|LessThan0~48     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~49     ; |myorgan|myclockdivider:Generate_clk|LessThan0~49     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~50     ; |myorgan|myclockdivider:Generate_clk|LessThan0~50     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~51     ; |myorgan|myclockdivider:Generate_clk|LessThan0~51     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~52     ; |myorgan|myclockdivider:Generate_clk|LessThan0~52     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~53     ; |myorgan|myclockdivider:Generate_clk|LessThan0~53     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~54     ; |myorgan|myclockdivider:Generate_clk|LessThan0~54     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~55     ; |myorgan|myclockdivider:Generate_clk|LessThan0~55     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~56     ; |myorgan|myclockdivider:Generate_clk|LessThan0~56     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~58     ; |myorgan|myclockdivider:Generate_clk|LessThan0~58     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~59     ; |myorgan|myclockdivider:Generate_clk|LessThan0~59     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~60     ; |myorgan|myclockdivider:Generate_clk|LessThan0~60     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~61     ; |myorgan|myclockdivider:Generate_clk|LessThan0~61     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~62     ; |myorgan|myclockdivider:Generate_clk|LessThan0~62     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~63     ; |myorgan|myclockdivider:Generate_clk|LessThan0~63     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~64     ; |myorgan|myclockdivider:Generate_clk|LessThan0~64     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~65     ; |myorgan|myclockdivider:Generate_clk|LessThan0~65     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~66     ; |myorgan|myclockdivider:Generate_clk|LessThan0~66     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~67     ; |myorgan|myclockdivider:Generate_clk|LessThan0~67     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~68     ; |myorgan|myclockdivider:Generate_clk|LessThan0~68     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~69     ; |myorgan|myclockdivider:Generate_clk|LessThan0~69     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~70     ; |myorgan|myclockdivider:Generate_clk|LessThan0~70     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~71     ; |myorgan|myclockdivider:Generate_clk|LessThan0~71     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~72     ; |myorgan|myclockdivider:Generate_clk|LessThan0~72     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~73     ; |myorgan|myclockdivider:Generate_clk|LessThan0~73     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~74     ; |myorgan|myclockdivider:Generate_clk|LessThan0~74     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~75     ; |myorgan|myclockdivider:Generate_clk|LessThan0~75     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~76     ; |myorgan|myclockdivider:Generate_clk|LessThan0~76     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~77     ; |myorgan|myclockdivider:Generate_clk|LessThan0~77     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~78     ; |myorgan|myclockdivider:Generate_clk|LessThan0~78     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~79     ; |myorgan|myclockdivider:Generate_clk|LessThan0~79     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~80     ; |myorgan|myclockdivider:Generate_clk|LessThan0~80     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~81     ; |myorgan|myclockdivider:Generate_clk|LessThan0~81     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~82     ; |myorgan|myclockdivider:Generate_clk|LessThan0~82     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~83     ; |myorgan|myclockdivider:Generate_clk|LessThan0~83     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~84     ; |myorgan|myclockdivider:Generate_clk|LessThan0~84     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~85     ; |myorgan|myclockdivider:Generate_clk|LessThan0~85     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~86     ; |myorgan|myclockdivider:Generate_clk|LessThan0~86     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~87     ; |myorgan|myclockdivider:Generate_clk|LessThan0~87     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~88     ; |myorgan|myclockdivider:Generate_clk|LessThan0~88     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~89     ; |myorgan|myclockdivider:Generate_clk|LessThan0~89     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~90     ; |myorgan|myclockdivider:Generate_clk|LessThan0~90     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~91     ; |myorgan|myclockdivider:Generate_clk|LessThan0~91     ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~92     ; |myorgan|myclockdivider:Generate_clk|LessThan0~92     ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~0       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~0       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~1       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~1       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~2       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~2       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~3       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~3       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~4       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~4       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~5       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~5       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~6       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~6       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~7       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~7       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~8       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~8       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~9       ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~9       ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~10      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~10      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~11      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~11      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~12      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~12      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~13      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~13      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~14      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~14      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~15      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~15      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~16      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~16      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~17      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~17      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~18      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~18      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~19      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~19      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~20      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~20      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~21      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~21      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~22      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~22      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~23      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~23      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~24      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~24      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~25      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~25      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~26      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~26      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~27      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~27      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~28      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~28      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~29      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~29      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~30      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~30      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~31      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~31      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~32      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~32      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~33      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~33      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~0           ; |myorgan|myclockdivider:Generate_clk|Add0~0           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~1           ; |myorgan|myclockdivider:Generate_clk|Add0~1           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~2           ; |myorgan|myclockdivider:Generate_clk|Add0~2           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~3           ; |myorgan|myclockdivider:Generate_clk|Add0~3           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~4           ; |myorgan|myclockdivider:Generate_clk|Add0~4           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~5           ; |myorgan|myclockdivider:Generate_clk|Add0~5           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~6           ; |myorgan|myclockdivider:Generate_clk|Add0~6           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~7           ; |myorgan|myclockdivider:Generate_clk|Add0~7           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~8           ; |myorgan|myclockdivider:Generate_clk|Add0~8           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~9           ; |myorgan|myclockdivider:Generate_clk|Add0~9           ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~10          ; |myorgan|myclockdivider:Generate_clk|Add0~10          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~11          ; |myorgan|myclockdivider:Generate_clk|Add0~11          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~12          ; |myorgan|myclockdivider:Generate_clk|Add0~12          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~13          ; |myorgan|myclockdivider:Generate_clk|Add0~13          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~14          ; |myorgan|myclockdivider:Generate_clk|Add0~14          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~15          ; |myorgan|myclockdivider:Generate_clk|Add0~15          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~16          ; |myorgan|myclockdivider:Generate_clk|Add0~16          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~17          ; |myorgan|myclockdivider:Generate_clk|Add0~17          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~18          ; |myorgan|myclockdivider:Generate_clk|Add0~18          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~19          ; |myorgan|myclockdivider:Generate_clk|Add0~19          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~20          ; |myorgan|myclockdivider:Generate_clk|Add0~20          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~21          ; |myorgan|myclockdivider:Generate_clk|Add0~21          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~22          ; |myorgan|myclockdivider:Generate_clk|Add0~22          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~23          ; |myorgan|myclockdivider:Generate_clk|Add0~23          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~24          ; |myorgan|myclockdivider:Generate_clk|Add0~24          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~25          ; |myorgan|myclockdivider:Generate_clk|Add0~25          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~26          ; |myorgan|myclockdivider:Generate_clk|Add0~26          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~27          ; |myorgan|myclockdivider:Generate_clk|Add0~27          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~28          ; |myorgan|myclockdivider:Generate_clk|Add0~28          ; out0             ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                         ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; Node Name                                             ; Output Port Name                                      ; Output Port Type ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; |myorgan|SW[0]                                        ; |myorgan|SW[0]                                        ; out              ;
+; |myorgan|SW[3]                                        ; |myorgan|SW[3]                                        ; out              ;
+; |myorgan|myclock_1Hz                                  ; |myorgan|myclock_1Hz                                  ; pin_out          ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~0    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~0    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~1    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~1    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~2    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~2    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~3    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~3    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~4    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~4    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~5    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~5    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~6    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~6    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~7    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~7    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~8    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~8    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~9    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~9    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~10   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~10   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~11   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~11   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~12   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~12   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|outclk~0     ; |myorgan|myclockdivider:Generate_1Hz_clk|outclk~0     ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|outclk       ; |myorgan|myclockdivider:Generate_1Hz_clk|outclk       ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[19]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[19]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[20]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[20]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[21]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[21]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[22]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[22]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[23]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[23]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[24]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[24]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[25]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[25]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[26]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[26]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[27]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[27]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[28]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[28]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[29]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[29]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[30]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[30]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[31]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[31]  ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter~0        ; |myorgan|myclockdivider:Generate_clk|counter~0        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~1        ; |myorgan|myclockdivider:Generate_clk|counter~1        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~2        ; |myorgan|myclockdivider:Generate_clk|counter~2        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~3        ; |myorgan|myclockdivider:Generate_clk|counter~3        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~4        ; |myorgan|myclockdivider:Generate_clk|counter~4        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~5        ; |myorgan|myclockdivider:Generate_clk|counter~5        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~6        ; |myorgan|myclockdivider:Generate_clk|counter~6        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~7        ; |myorgan|myclockdivider:Generate_clk|counter~7        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~8        ; |myorgan|myclockdivider:Generate_clk|counter~8        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~9        ; |myorgan|myclockdivider:Generate_clk|counter~9        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~10       ; |myorgan|myclockdivider:Generate_clk|counter~10       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~11       ; |myorgan|myclockdivider:Generate_clk|counter~11       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~12       ; |myorgan|myclockdivider:Generate_clk|counter~12       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~13       ; |myorgan|myclockdivider:Generate_clk|counter~13       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~14       ; |myorgan|myclockdivider:Generate_clk|counter~14       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~15       ; |myorgan|myclockdivider:Generate_clk|counter~15       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter[16]      ; |myorgan|myclockdivider:Generate_clk|counter[16]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[17]      ; |myorgan|myclockdivider:Generate_clk|counter[17]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[18]      ; |myorgan|myclockdivider:Generate_clk|counter[18]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[19]      ; |myorgan|myclockdivider:Generate_clk|counter[19]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[20]      ; |myorgan|myclockdivider:Generate_clk|counter[20]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[21]      ; |myorgan|myclockdivider:Generate_clk|counter[21]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[22]      ; |myorgan|myclockdivider:Generate_clk|counter[22]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[23]      ; |myorgan|myclockdivider:Generate_clk|counter[23]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[24]      ; |myorgan|myclockdivider:Generate_clk|counter[24]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[25]      ; |myorgan|myclockdivider:Generate_clk|counter[25]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[26]      ; |myorgan|myclockdivider:Generate_clk|counter[26]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[27]      ; |myorgan|myclockdivider:Generate_clk|counter[27]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[28]      ; |myorgan|myclockdivider:Generate_clk|counter[28]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[29]      ; |myorgan|myclockdivider:Generate_clk|counter[29]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[30]      ; |myorgan|myclockdivider:Generate_clk|counter[30]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[31]      ; |myorgan|myclockdivider:Generate_clk|counter[31]      ; regout           ;
+; |myorgan|Decoder0~0                                   ; |myorgan|Decoder0~0                                   ; out0             ;
+; |myorgan|Decoder1~0                                   ; |myorgan|Decoder1~0                                   ; out0             ;
+; |myorgan|Decoder2~0                                   ; |myorgan|Decoder2~0                                   ; out0             ;
+; |myorgan|Decoder2~2                                   ; |myorgan|Decoder2~2                                   ; out0             ;
+; |myorgan|Decoder2~3                                   ; |myorgan|Decoder2~3                                   ; out0             ;
+; |myorgan|Decoder2~4                                   ; |myorgan|Decoder2~4                                   ; out0             ;
+; |myorgan|Decoder3~0                                   ; |myorgan|Decoder3~0                                   ; out0             ;
+; |myorgan|Decoder3~2                                   ; |myorgan|Decoder3~2                                   ; out0             ;
+; |myorgan|Decoder3~3                                   ; |myorgan|Decoder3~3                                   ; out0             ;
+; |myorgan|Decoder4~0                                   ; |myorgan|Decoder4~0                                   ; out0             ;
+; |myorgan|Decoder4~2                                   ; |myorgan|Decoder4~2                                   ; out0             ;
+; |myorgan|Decoder4~3                                   ; |myorgan|Decoder4~3                                   ; out0             ;
+; |myorgan|Decoder4~4                                   ; |myorgan|Decoder4~4                                   ; out0             ;
+; |myorgan|Decoder5~2                                   ; |myorgan|Decoder5~2                                   ; out0             ;
+; |myorgan|Decoder5~3                                   ; |myorgan|Decoder5~3                                   ; out0             ;
+; |myorgan|Decoder5~4                                   ; |myorgan|Decoder5~4                                   ; out0             ;
+; |myorgan|Decoder6~0                                   ; |myorgan|Decoder6~0                                   ; out0             ;
+; |myorgan|Decoder6~3                                   ; |myorgan|Decoder6~3                                   ; out0             ;
+; |myorgan|Decoder6~4                                   ; |myorgan|Decoder6~4                                   ; out0             ;
+; |myorgan|Decoder8~0                                   ; |myorgan|Decoder8~0                                   ; out0             ;
+; |myorgan|Decoder8~2                                   ; |myorgan|Decoder8~2                                   ; out0             ;
+; |myorgan|Decoder8~3                                   ; |myorgan|Decoder8~3                                   ; out0             ;
+; |myorgan|Decoder8~4                                   ; |myorgan|Decoder8~4                                   ; out0             ;
+; |myorgan|Decoder9~2                                   ; |myorgan|Decoder9~2                                   ; out0             ;
+; |myorgan|Decoder9~3                                   ; |myorgan|Decoder9~3                                   ; out0             ;
+; |myorgan|Decoder9~4                                   ; |myorgan|Decoder9~4                                   ; out0             ;
+; |myorgan|Decoder10~0                                  ; |myorgan|Decoder10~0                                  ; out0             ;
+; |myorgan|Decoder10~3                                  ; |myorgan|Decoder10~3                                  ; out0             ;
+; |myorgan|Decoder10~4                                  ; |myorgan|Decoder10~4                                  ; out0             ;
+; |myorgan|Decoder10~5                                  ; |myorgan|Decoder10~5                                  ; out0             ;
+; |myorgan|Decoder11~0                                  ; |myorgan|Decoder11~0                                  ; out0             ;
+; |myorgan|Decoder11~3                                  ; |myorgan|Decoder11~3                                  ; out0             ;
+; |myorgan|Decoder11~4                                  ; |myorgan|Decoder11~4                                  ; out0             ;
+; |myorgan|Decoder11~5                                  ; |myorgan|Decoder11~5                                  ; out0             ;
+; |myorgan|Decoder11~6                                  ; |myorgan|Decoder11~6                                  ; out0             ;
+; |myorgan|Decoder12~0                                  ; |myorgan|Decoder12~0                                  ; out0             ;
+; |myorgan|Decoder13~1                                  ; |myorgan|Decoder13~1                                  ; out0             ;
+; |myorgan|Decoder14~0                                  ; |myorgan|Decoder14~0                                  ; out0             ;
+; |myorgan|Decoder14~3                                  ; |myorgan|Decoder14~3                                  ; out0             ;
+; |myorgan|Decoder14~4                                  ; |myorgan|Decoder14~4                                  ; out0             ;
+; |myorgan|Decoder14~5                                  ; |myorgan|Decoder14~5                                  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~18 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~18 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~19 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~19 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~20 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~20 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~21 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~21 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~22 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~22 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~23 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~23 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~24 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~24 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~25 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~25 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~26 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~26 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~27 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~27 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~28 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~28 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~29 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~29 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~30 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~30 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~31 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~31 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~32 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~32 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~33 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~33 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~34 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~34 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~35 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~35 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~36 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~36 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~37 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~37 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~38 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~38 ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~57     ; |myorgan|myclockdivider:Generate_clk|LessThan0~57     ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~35      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~35      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~36      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~36      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~37      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~37      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~38      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~38      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~39      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~39      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~40      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~40      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~41      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~41      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~42      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~42      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~43      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~43      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~44      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~44      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~45      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~45      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~46      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~46      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~47      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~47      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~48      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~48      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~49      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~49      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~50      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~50      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~51      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~51      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~52      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~52      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~53      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~53      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~54      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~54      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~55      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~55      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~56      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~56      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~57      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~57      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~58      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~58      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~59      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~59      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~60      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~60      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~29          ; |myorgan|myclockdivider:Generate_clk|Add0~29          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~30          ; |myorgan|myclockdivider:Generate_clk|Add0~30          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~31          ; |myorgan|myclockdivider:Generate_clk|Add0~31          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~32          ; |myorgan|myclockdivider:Generate_clk|Add0~32          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~33          ; |myorgan|myclockdivider:Generate_clk|Add0~33          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~34          ; |myorgan|myclockdivider:Generate_clk|Add0~34          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~35          ; |myorgan|myclockdivider:Generate_clk|Add0~35          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~36          ; |myorgan|myclockdivider:Generate_clk|Add0~36          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~37          ; |myorgan|myclockdivider:Generate_clk|Add0~37          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~38          ; |myorgan|myclockdivider:Generate_clk|Add0~38          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~39          ; |myorgan|myclockdivider:Generate_clk|Add0~39          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~40          ; |myorgan|myclockdivider:Generate_clk|Add0~40          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~41          ; |myorgan|myclockdivider:Generate_clk|Add0~41          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~42          ; |myorgan|myclockdivider:Generate_clk|Add0~42          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~43          ; |myorgan|myclockdivider:Generate_clk|Add0~43          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~44          ; |myorgan|myclockdivider:Generate_clk|Add0~44          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~45          ; |myorgan|myclockdivider:Generate_clk|Add0~45          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~46          ; |myorgan|myclockdivider:Generate_clk|Add0~46          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~47          ; |myorgan|myclockdivider:Generate_clk|Add0~47          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~48          ; |myorgan|myclockdivider:Generate_clk|Add0~48          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~49          ; |myorgan|myclockdivider:Generate_clk|Add0~49          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~50          ; |myorgan|myclockdivider:Generate_clk|Add0~50          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~51          ; |myorgan|myclockdivider:Generate_clk|Add0~51          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~52          ; |myorgan|myclockdivider:Generate_clk|Add0~52          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~53          ; |myorgan|myclockdivider:Generate_clk|Add0~53          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~54          ; |myorgan|myclockdivider:Generate_clk|Add0~54          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~55          ; |myorgan|myclockdivider:Generate_clk|Add0~55          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~56          ; |myorgan|myclockdivider:Generate_clk|Add0~56          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~57          ; |myorgan|myclockdivider:Generate_clk|Add0~57          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~58          ; |myorgan|myclockdivider:Generate_clk|Add0~58          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~59          ; |myorgan|myclockdivider:Generate_clk|Add0~59          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~60          ; |myorgan|myclockdivider:Generate_clk|Add0~60          ; out0             ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                         ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; Node Name                                             ; Output Port Name                                      ; Output Port Type ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; |myorgan|SW[0]                                        ; |myorgan|SW[0]                                        ; out              ;
+; |myorgan|SW[3]                                        ; |myorgan|SW[3]                                        ; out              ;
+; |myorgan|myclock_1Hz                                  ; |myorgan|myclock_1Hz                                  ; pin_out          ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~0    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~0    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~1    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~1    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~2    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~2    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~3    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~3    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~4    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~4    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~5    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~5    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~6    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~6    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~7    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~7    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~8    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~8    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~9    ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~9    ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~10   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~10   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~11   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~11   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~12   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~12   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter~13   ; |myorgan|myclockdivider:Generate_1Hz_clk|counter~13   ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|outclk~0     ; |myorgan|myclockdivider:Generate_1Hz_clk|outclk~0     ; out              ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|outclk       ; |myorgan|myclockdivider:Generate_1Hz_clk|outclk       ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[18]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[18]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[19]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[19]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[20]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[20]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[21]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[21]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[22]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[22]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[23]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[23]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[24]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[24]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[25]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[25]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[26]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[26]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[27]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[27]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[28]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[28]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[29]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[29]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[30]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[30]  ; regout           ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|counter[31]  ; |myorgan|myclockdivider:Generate_1Hz_clk|counter[31]  ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter~0        ; |myorgan|myclockdivider:Generate_clk|counter~0        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~1        ; |myorgan|myclockdivider:Generate_clk|counter~1        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~2        ; |myorgan|myclockdivider:Generate_clk|counter~2        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~3        ; |myorgan|myclockdivider:Generate_clk|counter~3        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~4        ; |myorgan|myclockdivider:Generate_clk|counter~4        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~5        ; |myorgan|myclockdivider:Generate_clk|counter~5        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~6        ; |myorgan|myclockdivider:Generate_clk|counter~6        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~7        ; |myorgan|myclockdivider:Generate_clk|counter~7        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~8        ; |myorgan|myclockdivider:Generate_clk|counter~8        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~9        ; |myorgan|myclockdivider:Generate_clk|counter~9        ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~10       ; |myorgan|myclockdivider:Generate_clk|counter~10       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~11       ; |myorgan|myclockdivider:Generate_clk|counter~11       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~12       ; |myorgan|myclockdivider:Generate_clk|counter~12       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~13       ; |myorgan|myclockdivider:Generate_clk|counter~13       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~14       ; |myorgan|myclockdivider:Generate_clk|counter~14       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter~15       ; |myorgan|myclockdivider:Generate_clk|counter~15       ; out              ;
+; |myorgan|myclockdivider:Generate_clk|counter[16]      ; |myorgan|myclockdivider:Generate_clk|counter[16]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[17]      ; |myorgan|myclockdivider:Generate_clk|counter[17]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[18]      ; |myorgan|myclockdivider:Generate_clk|counter[18]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[19]      ; |myorgan|myclockdivider:Generate_clk|counter[19]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[20]      ; |myorgan|myclockdivider:Generate_clk|counter[20]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[21]      ; |myorgan|myclockdivider:Generate_clk|counter[21]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[22]      ; |myorgan|myclockdivider:Generate_clk|counter[22]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[23]      ; |myorgan|myclockdivider:Generate_clk|counter[23]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[24]      ; |myorgan|myclockdivider:Generate_clk|counter[24]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[25]      ; |myorgan|myclockdivider:Generate_clk|counter[25]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[26]      ; |myorgan|myclockdivider:Generate_clk|counter[26]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[27]      ; |myorgan|myclockdivider:Generate_clk|counter[27]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[28]      ; |myorgan|myclockdivider:Generate_clk|counter[28]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[29]      ; |myorgan|myclockdivider:Generate_clk|counter[29]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[30]      ; |myorgan|myclockdivider:Generate_clk|counter[30]      ; regout           ;
+; |myorgan|myclockdivider:Generate_clk|counter[31]      ; |myorgan|myclockdivider:Generate_clk|counter[31]      ; regout           ;
+; |myorgan|Decoder0~0                                   ; |myorgan|Decoder0~0                                   ; out0             ;
+; |myorgan|Decoder1~0                                   ; |myorgan|Decoder1~0                                   ; out0             ;
+; |myorgan|Decoder2~0                                   ; |myorgan|Decoder2~0                                   ; out0             ;
+; |myorgan|Decoder2~2                                   ; |myorgan|Decoder2~2                                   ; out0             ;
+; |myorgan|Decoder2~3                                   ; |myorgan|Decoder2~3                                   ; out0             ;
+; |myorgan|Decoder2~4                                   ; |myorgan|Decoder2~4                                   ; out0             ;
+; |myorgan|Decoder3~0                                   ; |myorgan|Decoder3~0                                   ; out0             ;
+; |myorgan|Decoder3~2                                   ; |myorgan|Decoder3~2                                   ; out0             ;
+; |myorgan|Decoder3~3                                   ; |myorgan|Decoder3~3                                   ; out0             ;
+; |myorgan|Decoder4~0                                   ; |myorgan|Decoder4~0                                   ; out0             ;
+; |myorgan|Decoder4~2                                   ; |myorgan|Decoder4~2                                   ; out0             ;
+; |myorgan|Decoder4~3                                   ; |myorgan|Decoder4~3                                   ; out0             ;
+; |myorgan|Decoder4~4                                   ; |myorgan|Decoder4~4                                   ; out0             ;
+; |myorgan|Decoder5~2                                   ; |myorgan|Decoder5~2                                   ; out0             ;
+; |myorgan|Decoder5~3                                   ; |myorgan|Decoder5~3                                   ; out0             ;
+; |myorgan|Decoder5~4                                   ; |myorgan|Decoder5~4                                   ; out0             ;
+; |myorgan|Decoder6~0                                   ; |myorgan|Decoder6~0                                   ; out0             ;
+; |myorgan|Decoder6~3                                   ; |myorgan|Decoder6~3                                   ; out0             ;
+; |myorgan|Decoder6~4                                   ; |myorgan|Decoder6~4                                   ; out0             ;
+; |myorgan|Decoder8~0                                   ; |myorgan|Decoder8~0                                   ; out0             ;
+; |myorgan|Decoder8~2                                   ; |myorgan|Decoder8~2                                   ; out0             ;
+; |myorgan|Decoder8~3                                   ; |myorgan|Decoder8~3                                   ; out0             ;
+; |myorgan|Decoder8~4                                   ; |myorgan|Decoder8~4                                   ; out0             ;
+; |myorgan|Decoder9~2                                   ; |myorgan|Decoder9~2                                   ; out0             ;
+; |myorgan|Decoder9~3                                   ; |myorgan|Decoder9~3                                   ; out0             ;
+; |myorgan|Decoder9~4                                   ; |myorgan|Decoder9~4                                   ; out0             ;
+; |myorgan|Decoder10~0                                  ; |myorgan|Decoder10~0                                  ; out0             ;
+; |myorgan|Decoder10~3                                  ; |myorgan|Decoder10~3                                  ; out0             ;
+; |myorgan|Decoder10~4                                  ; |myorgan|Decoder10~4                                  ; out0             ;
+; |myorgan|Decoder10~5                                  ; |myorgan|Decoder10~5                                  ; out0             ;
+; |myorgan|Decoder11~0                                  ; |myorgan|Decoder11~0                                  ; out0             ;
+; |myorgan|Decoder11~3                                  ; |myorgan|Decoder11~3                                  ; out0             ;
+; |myorgan|Decoder11~4                                  ; |myorgan|Decoder11~4                                  ; out0             ;
+; |myorgan|Decoder11~5                                  ; |myorgan|Decoder11~5                                  ; out0             ;
+; |myorgan|Decoder11~6                                  ; |myorgan|Decoder11~6                                  ; out0             ;
+; |myorgan|Decoder12~0                                  ; |myorgan|Decoder12~0                                  ; out0             ;
+; |myorgan|Decoder13~1                                  ; |myorgan|Decoder13~1                                  ; out0             ;
+; |myorgan|Decoder14~0                                  ; |myorgan|Decoder14~0                                  ; out0             ;
+; |myorgan|Decoder14~3                                  ; |myorgan|Decoder14~3                                  ; out0             ;
+; |myorgan|Decoder14~4                                  ; |myorgan|Decoder14~4                                  ; out0             ;
+; |myorgan|Decoder14~5                                  ; |myorgan|Decoder14~5                                  ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~17 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~17 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~18 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~18 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~19 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~19 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~20 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~20 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~21 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~21 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~22 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~22 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~23 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~23 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~24 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~24 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~25 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~25 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~26 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~26 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~27 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~27 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~28 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~28 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~29 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~29 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~30 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~30 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~31 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~31 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~32 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~32 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~33 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~33 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~34 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~34 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~35 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~35 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~36 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~36 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~37 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~37 ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~38 ; |myorgan|myclockdivider:Generate_1Hz_clk|LessThan0~38 ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|LessThan0~57     ; |myorgan|myclockdivider:Generate_clk|LessThan0~57     ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~34      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~34      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~35      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~35      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~36      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~36      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~37      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~37      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~38      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~38      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~39      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~39      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~40      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~40      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~41      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~41      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~42      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~42      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~43      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~43      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~44      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~44      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~45      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~45      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~46      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~46      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~47      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~47      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~48      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~48      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~49      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~49      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~50      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~50      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~51      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~51      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~52      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~52      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~53      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~53      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~54      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~54      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~55      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~55      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~56      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~56      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~57      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~57      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~58      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~58      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~59      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~59      ; out0             ;
+; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~60      ; |myorgan|myclockdivider:Generate_1Hz_clk|Add0~60      ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~29          ; |myorgan|myclockdivider:Generate_clk|Add0~29          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~30          ; |myorgan|myclockdivider:Generate_clk|Add0~30          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~31          ; |myorgan|myclockdivider:Generate_clk|Add0~31          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~32          ; |myorgan|myclockdivider:Generate_clk|Add0~32          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~33          ; |myorgan|myclockdivider:Generate_clk|Add0~33          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~34          ; |myorgan|myclockdivider:Generate_clk|Add0~34          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~35          ; |myorgan|myclockdivider:Generate_clk|Add0~35          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~36          ; |myorgan|myclockdivider:Generate_clk|Add0~36          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~37          ; |myorgan|myclockdivider:Generate_clk|Add0~37          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~38          ; |myorgan|myclockdivider:Generate_clk|Add0~38          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~39          ; |myorgan|myclockdivider:Generate_clk|Add0~39          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~40          ; |myorgan|myclockdivider:Generate_clk|Add0~40          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~41          ; |myorgan|myclockdivider:Generate_clk|Add0~41          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~42          ; |myorgan|myclockdivider:Generate_clk|Add0~42          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~43          ; |myorgan|myclockdivider:Generate_clk|Add0~43          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~44          ; |myorgan|myclockdivider:Generate_clk|Add0~44          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~45          ; |myorgan|myclockdivider:Generate_clk|Add0~45          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~46          ; |myorgan|myclockdivider:Generate_clk|Add0~46          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~47          ; |myorgan|myclockdivider:Generate_clk|Add0~47          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~48          ; |myorgan|myclockdivider:Generate_clk|Add0~48          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~49          ; |myorgan|myclockdivider:Generate_clk|Add0~49          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~50          ; |myorgan|myclockdivider:Generate_clk|Add0~50          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~51          ; |myorgan|myclockdivider:Generate_clk|Add0~51          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~52          ; |myorgan|myclockdivider:Generate_clk|Add0~52          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~53          ; |myorgan|myclockdivider:Generate_clk|Add0~53          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~54          ; |myorgan|myclockdivider:Generate_clk|Add0~54          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~55          ; |myorgan|myclockdivider:Generate_clk|Add0~55          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~56          ; |myorgan|myclockdivider:Generate_clk|Add0~56          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~57          ; |myorgan|myclockdivider:Generate_clk|Add0~57          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~58          ; |myorgan|myclockdivider:Generate_clk|Add0~58          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~59          ; |myorgan|myclockdivider:Generate_clk|Add0~59          ; out0             ;
+; |myorgan|myclockdivider:Generate_clk|Add0~60          ; |myorgan|myclockdivider:Generate_clk|Add0~60          ; out0             ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu May 22 18:09:09 2025
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off myorgan -c myorgan
+Info: Using vector source file "C:/Users/Admin/Desktop/ubc/2025S_T1/cpen311/lab/lab1/lab1_template_de1soc/lab1_template_de1soc/myorgan.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of myorgan.vwf called myorgan.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      59.74 %
+Info: Number of transitions in simulation is 13052551
+Info: Vector file myorgan.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 161 megabytes
+    Info: Processing ended: Thu May 22 18:09:47 2025
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:38
+
+

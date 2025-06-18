@@ -1,0 +1,586 @@
+Simulator report for myclockdivider
+Thu May 22 08:05:09 2025
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 5.5 s        ;
+; Simulation Netlist Size     ; 323 nodes    ;
+; Simulation Coverage         ;      63.47 % ;
+; Total Number of Transitions ; 27761475     ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      63.47 % ;
+; Total nodes checked                                 ; 323          ;
+; Total output ports checked                          ; 323          ;
+; Total output ports with complete 1/0-value coverage ; 205          ;
+; Total output ports with no 1/0-value coverage       ; 100          ;
+; Total output ports with no 1-value coverage         ; 101          ;
+; Total output ports with no 0-value coverage         ; 117          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                              ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |myclockdivider|counter~14        ; |myclockdivider|counter~14        ; out              ;
+; |myclockdivider|counter~15        ; |myclockdivider|counter~15        ; out              ;
+; |myclockdivider|counter~16        ; |myclockdivider|counter~16        ; out              ;
+; |myclockdivider|counter~17        ; |myclockdivider|counter~17        ; out              ;
+; |myclockdivider|counter~18        ; |myclockdivider|counter~18        ; out              ;
+; |myclockdivider|counter~19        ; |myclockdivider|counter~19        ; out              ;
+; |myclockdivider|counter~20        ; |myclockdivider|counter~20        ; out              ;
+; |myclockdivider|counter~21        ; |myclockdivider|counter~21        ; out              ;
+; |myclockdivider|counter~22        ; |myclockdivider|counter~22        ; out              ;
+; |myclockdivider|counter~23        ; |myclockdivider|counter~23        ; out              ;
+; |myclockdivider|counter~24        ; |myclockdivider|counter~24        ; out              ;
+; |myclockdivider|counter~25        ; |myclockdivider|counter~25        ; out              ;
+; |myclockdivider|counter~26        ; |myclockdivider|counter~26        ; out              ;
+; |myclockdivider|counter~27        ; |myclockdivider|counter~27        ; out              ;
+; |myclockdivider|counter~28        ; |myclockdivider|counter~28        ; out              ;
+; |myclockdivider|counter~29        ; |myclockdivider|counter~29        ; out              ;
+; |myclockdivider|counter~30        ; |myclockdivider|counter~30        ; out              ;
+; |myclockdivider|counter~31        ; |myclockdivider|counter~31        ; out              ;
+; |myclockdivider|outclk~0          ; |myclockdivider|outclk~0          ; out              ;
+; |myclockdivider|counter~46        ; |myclockdivider|counter~46        ; out              ;
+; |myclockdivider|counter~47        ; |myclockdivider|counter~47        ; out              ;
+; |myclockdivider|counter~48        ; |myclockdivider|counter~48        ; out              ;
+; |myclockdivider|counter~49        ; |myclockdivider|counter~49        ; out              ;
+; |myclockdivider|counter~50        ; |myclockdivider|counter~50        ; out              ;
+; |myclockdivider|counter~51        ; |myclockdivider|counter~51        ; out              ;
+; |myclockdivider|counter~52        ; |myclockdivider|counter~52        ; out              ;
+; |myclockdivider|counter~53        ; |myclockdivider|counter~53        ; out              ;
+; |myclockdivider|counter~54        ; |myclockdivider|counter~54        ; out              ;
+; |myclockdivider|counter~55        ; |myclockdivider|counter~55        ; out              ;
+; |myclockdivider|counter~56        ; |myclockdivider|counter~56        ; out              ;
+; |myclockdivider|counter~57        ; |myclockdivider|counter~57        ; out              ;
+; |myclockdivider|counter~58        ; |myclockdivider|counter~58        ; out              ;
+; |myclockdivider|counter~59        ; |myclockdivider|counter~59        ; out              ;
+; |myclockdivider|counter~60        ; |myclockdivider|counter~60        ; out              ;
+; |myclockdivider|counter~61        ; |myclockdivider|counter~61        ; out              ;
+; |myclockdivider|counter~62        ; |myclockdivider|counter~62        ; out              ;
+; |myclockdivider|counter~63        ; |myclockdivider|counter~63        ; out              ;
+; |myclockdivider|outclk~1          ; |myclockdivider|outclk~1          ; out              ;
+; |myclockdivider|outclk~reg0       ; |myclockdivider|outclk~reg0       ; regout           ;
+; |myclockdivider|counter[0]        ; |myclockdivider|counter[0]        ; regout           ;
+; |myclockdivider|counter[1]        ; |myclockdivider|counter[1]        ; regout           ;
+; |myclockdivider|counter[2]        ; |myclockdivider|counter[2]        ; regout           ;
+; |myclockdivider|counter[3]        ; |myclockdivider|counter[3]        ; regout           ;
+; |myclockdivider|counter[4]        ; |myclockdivider|counter[4]        ; regout           ;
+; |myclockdivider|counter[5]        ; |myclockdivider|counter[5]        ; regout           ;
+; |myclockdivider|counter[6]        ; |myclockdivider|counter[6]        ; regout           ;
+; |myclockdivider|counter[7]        ; |myclockdivider|counter[7]        ; regout           ;
+; |myclockdivider|counter[8]        ; |myclockdivider|counter[8]        ; regout           ;
+; |myclockdivider|counter[9]        ; |myclockdivider|counter[9]        ; regout           ;
+; |myclockdivider|counter[10]       ; |myclockdivider|counter[10]       ; regout           ;
+; |myclockdivider|counter[11]       ; |myclockdivider|counter[11]       ; regout           ;
+; |myclockdivider|counter[12]       ; |myclockdivider|counter[12]       ; regout           ;
+; |myclockdivider|counter[13]       ; |myclockdivider|counter[13]       ; regout           ;
+; |myclockdivider|counter[14]       ; |myclockdivider|counter[14]       ; regout           ;
+; |myclockdivider|counter[15]       ; |myclockdivider|counter[15]       ; regout           ;
+; |myclockdivider|counter[16]       ; |myclockdivider|counter[16]       ; regout           ;
+; |myclockdivider|counter[17]       ; |myclockdivider|counter[17]       ; regout           ;
+; |myclockdivider|inclk             ; |myclockdivider|inclk             ; out              ;
+; |myclockdivider|div_clk_count[0]  ; |myclockdivider|div_clk_count[0]  ; out              ;
+; |myclockdivider|div_clk_count[2]  ; |myclockdivider|div_clk_count[2]  ; out              ;
+; |myclockdivider|div_clk_count[3]  ; |myclockdivider|div_clk_count[3]  ; out              ;
+; |myclockdivider|div_clk_count[4]  ; |myclockdivider|div_clk_count[4]  ; out              ;
+; |myclockdivider|div_clk_count[5]  ; |myclockdivider|div_clk_count[5]  ; out              ;
+; |myclockdivider|div_clk_count[6]  ; |myclockdivider|div_clk_count[6]  ; out              ;
+; |myclockdivider|div_clk_count[7]  ; |myclockdivider|div_clk_count[7]  ; out              ;
+; |myclockdivider|div_clk_count[8]  ; |myclockdivider|div_clk_count[8]  ; out              ;
+; |myclockdivider|div_clk_count[9]  ; |myclockdivider|div_clk_count[9]  ; out              ;
+; |myclockdivider|div_clk_count[10] ; |myclockdivider|div_clk_count[10] ; out              ;
+; |myclockdivider|div_clk_count[11] ; |myclockdivider|div_clk_count[11] ; out              ;
+; |myclockdivider|div_clk_count[12] ; |myclockdivider|div_clk_count[12] ; out              ;
+; |myclockdivider|div_clk_count[13] ; |myclockdivider|div_clk_count[13] ; out              ;
+; |myclockdivider|outclk            ; |myclockdivider|outclk            ; pin_out          ;
+; |myclockdivider|LessThan0~0       ; |myclockdivider|LessThan0~0       ; out0             ;
+; |myclockdivider|LessThan0~1       ; |myclockdivider|LessThan0~1       ; out0             ;
+; |myclockdivider|LessThan0~2       ; |myclockdivider|LessThan0~2       ; out0             ;
+; |myclockdivider|LessThan0~3       ; |myclockdivider|LessThan0~3       ; out0             ;
+; |myclockdivider|LessThan0~4       ; |myclockdivider|LessThan0~4       ; out0             ;
+; |myclockdivider|LessThan0~5       ; |myclockdivider|LessThan0~5       ; out0             ;
+; |myclockdivider|LessThan0~6       ; |myclockdivider|LessThan0~6       ; out0             ;
+; |myclockdivider|LessThan0~7       ; |myclockdivider|LessThan0~7       ; out0             ;
+; |myclockdivider|LessThan0~8       ; |myclockdivider|LessThan0~8       ; out0             ;
+; |myclockdivider|LessThan0~9       ; |myclockdivider|LessThan0~9       ; out0             ;
+; |myclockdivider|LessThan0~10      ; |myclockdivider|LessThan0~10      ; out0             ;
+; |myclockdivider|LessThan0~11      ; |myclockdivider|LessThan0~11      ; out0             ;
+; |myclockdivider|LessThan0~12      ; |myclockdivider|LessThan0~12      ; out0             ;
+; |myclockdivider|LessThan0~13      ; |myclockdivider|LessThan0~13      ; out0             ;
+; |myclockdivider|LessThan0~14      ; |myclockdivider|LessThan0~14      ; out0             ;
+; |myclockdivider|LessThan0~15      ; |myclockdivider|LessThan0~15      ; out0             ;
+; |myclockdivider|LessThan0~16      ; |myclockdivider|LessThan0~16      ; out0             ;
+; |myclockdivider|LessThan0~17      ; |myclockdivider|LessThan0~17      ; out0             ;
+; |myclockdivider|LessThan0~18      ; |myclockdivider|LessThan0~18      ; out0             ;
+; |myclockdivider|LessThan0~19      ; |myclockdivider|LessThan0~19      ; out0             ;
+; |myclockdivider|LessThan0~20      ; |myclockdivider|LessThan0~20      ; out0             ;
+; |myclockdivider|LessThan0~21      ; |myclockdivider|LessThan0~21      ; out0             ;
+; |myclockdivider|LessThan0~22      ; |myclockdivider|LessThan0~22      ; out0             ;
+; |myclockdivider|LessThan0~23      ; |myclockdivider|LessThan0~23      ; out0             ;
+; |myclockdivider|LessThan0~24      ; |myclockdivider|LessThan0~24      ; out0             ;
+; |myclockdivider|LessThan0~25      ; |myclockdivider|LessThan0~25      ; out0             ;
+; |myclockdivider|LessThan0~26      ; |myclockdivider|LessThan0~26      ; out0             ;
+; |myclockdivider|LessThan0~27      ; |myclockdivider|LessThan0~27      ; out0             ;
+; |myclockdivider|LessThan0~28      ; |myclockdivider|LessThan0~28      ; out0             ;
+; |myclockdivider|LessThan0~29      ; |myclockdivider|LessThan0~29      ; out0             ;
+; |myclockdivider|LessThan0~30      ; |myclockdivider|LessThan0~30      ; out0             ;
+; |myclockdivider|LessThan0~31      ; |myclockdivider|LessThan0~31      ; out0             ;
+; |myclockdivider|LessThan0~32      ; |myclockdivider|LessThan0~32      ; out0             ;
+; |myclockdivider|LessThan0~33      ; |myclockdivider|LessThan0~33      ; out0             ;
+; |myclockdivider|LessThan0~34      ; |myclockdivider|LessThan0~34      ; out0             ;
+; |myclockdivider|LessThan0~35      ; |myclockdivider|LessThan0~35      ; out0             ;
+; |myclockdivider|LessThan0~36      ; |myclockdivider|LessThan0~36      ; out0             ;
+; |myclockdivider|LessThan0~37      ; |myclockdivider|LessThan0~37      ; out0             ;
+; |myclockdivider|LessThan0~38      ; |myclockdivider|LessThan0~38      ; out0             ;
+; |myclockdivider|LessThan0~39      ; |myclockdivider|LessThan0~39      ; out0             ;
+; |myclockdivider|LessThan0~40      ; |myclockdivider|LessThan0~40      ; out0             ;
+; |myclockdivider|LessThan0~41      ; |myclockdivider|LessThan0~41      ; out0             ;
+; |myclockdivider|LessThan0~42      ; |myclockdivider|LessThan0~42      ; out0             ;
+; |myclockdivider|LessThan0~43      ; |myclockdivider|LessThan0~43      ; out0             ;
+; |myclockdivider|LessThan0~44      ; |myclockdivider|LessThan0~44      ; out0             ;
+; |myclockdivider|LessThan0~45      ; |myclockdivider|LessThan0~45      ; out0             ;
+; |myclockdivider|LessThan0~46      ; |myclockdivider|LessThan0~46      ; out0             ;
+; |myclockdivider|LessThan0~47      ; |myclockdivider|LessThan0~47      ; out0             ;
+; |myclockdivider|LessThan0~48      ; |myclockdivider|LessThan0~48      ; out0             ;
+; |myclockdivider|LessThan0~49      ; |myclockdivider|LessThan0~49      ; out0             ;
+; |myclockdivider|LessThan0~50      ; |myclockdivider|LessThan0~50      ; out0             ;
+; |myclockdivider|LessThan0~51      ; |myclockdivider|LessThan0~51      ; out0             ;
+; |myclockdivider|LessThan0~52      ; |myclockdivider|LessThan0~52      ; out0             ;
+; |myclockdivider|LessThan0~53      ; |myclockdivider|LessThan0~53      ; out0             ;
+; |myclockdivider|LessThan0~54      ; |myclockdivider|LessThan0~54      ; out0             ;
+; |myclockdivider|LessThan0~55      ; |myclockdivider|LessThan0~55      ; out0             ;
+; |myclockdivider|LessThan0~56      ; |myclockdivider|LessThan0~56      ; out0             ;
+; |myclockdivider|LessThan0~57      ; |myclockdivider|LessThan0~57      ; out0             ;
+; |myclockdivider|LessThan0~58      ; |myclockdivider|LessThan0~58      ; out0             ;
+; |myclockdivider|LessThan0~59      ; |myclockdivider|LessThan0~59      ; out0             ;
+; |myclockdivider|LessThan0~60      ; |myclockdivider|LessThan0~60      ; out0             ;
+; |myclockdivider|LessThan0~61      ; |myclockdivider|LessThan0~61      ; out0             ;
+; |myclockdivider|LessThan0~62      ; |myclockdivider|LessThan0~62      ; out0             ;
+; |myclockdivider|LessThan0~64      ; |myclockdivider|LessThan0~64      ; out0             ;
+; |myclockdivider|LessThan0~65      ; |myclockdivider|LessThan0~65      ; out0             ;
+; |myclockdivider|LessThan0~66      ; |myclockdivider|LessThan0~66      ; out0             ;
+; |myclockdivider|LessThan0~67      ; |myclockdivider|LessThan0~67      ; out0             ;
+; |myclockdivider|LessThan0~68      ; |myclockdivider|LessThan0~68      ; out0             ;
+; |myclockdivider|LessThan0~69      ; |myclockdivider|LessThan0~69      ; out0             ;
+; |myclockdivider|LessThan0~70      ; |myclockdivider|LessThan0~70      ; out0             ;
+; |myclockdivider|LessThan0~72      ; |myclockdivider|LessThan0~72      ; out0             ;
+; |myclockdivider|LessThan0~73      ; |myclockdivider|LessThan0~73      ; out0             ;
+; |myclockdivider|LessThan0~74      ; |myclockdivider|LessThan0~74      ; out0             ;
+; |myclockdivider|LessThan0~76      ; |myclockdivider|LessThan0~76      ; out0             ;
+; |myclockdivider|LessThan0~78      ; |myclockdivider|LessThan0~78      ; out0             ;
+; |myclockdivider|LessThan0~80      ; |myclockdivider|LessThan0~80      ; out0             ;
+; |myclockdivider|LessThan0~82      ; |myclockdivider|LessThan0~82      ; out0             ;
+; |myclockdivider|LessThan0~84      ; |myclockdivider|LessThan0~84      ; out0             ;
+; |myclockdivider|LessThan0~86      ; |myclockdivider|LessThan0~86      ; out0             ;
+; |myclockdivider|LessThan0~88      ; |myclockdivider|LessThan0~88      ; out0             ;
+; |myclockdivider|LessThan0~90      ; |myclockdivider|LessThan0~90      ; out0             ;
+; |myclockdivider|LessThan0~92      ; |myclockdivider|LessThan0~92      ; out0             ;
+; |myclockdivider|LessThan0~94      ; |myclockdivider|LessThan0~94      ; out0             ;
+; |myclockdivider|LessThan0~96      ; |myclockdivider|LessThan0~96      ; out0             ;
+; |myclockdivider|LessThan0~98      ; |myclockdivider|LessThan0~98      ; out0             ;
+; |myclockdivider|LessThan0~100     ; |myclockdivider|LessThan0~100     ; out0             ;
+; |myclockdivider|LessThan0~102     ; |myclockdivider|LessThan0~102     ; out0             ;
+; |myclockdivider|LessThan0~104     ; |myclockdivider|LessThan0~104     ; out0             ;
+; |myclockdivider|LessThan0~106     ; |myclockdivider|LessThan0~106     ; out0             ;
+; |myclockdivider|LessThan0~108     ; |myclockdivider|LessThan0~108     ; out0             ;
+; |myclockdivider|LessThan0~110     ; |myclockdivider|LessThan0~110     ; out0             ;
+; |myclockdivider|LessThan0~112     ; |myclockdivider|LessThan0~112     ; out0             ;
+; |myclockdivider|LessThan0~114     ; |myclockdivider|LessThan0~114     ; out0             ;
+; |myclockdivider|LessThan0~116     ; |myclockdivider|LessThan0~116     ; out0             ;
+; |myclockdivider|LessThan0~118     ; |myclockdivider|LessThan0~118     ; out0             ;
+; |myclockdivider|LessThan0~120     ; |myclockdivider|LessThan0~120     ; out0             ;
+; |myclockdivider|LessThan0~122     ; |myclockdivider|LessThan0~122     ; out0             ;
+; |myclockdivider|LessThan0~124     ; |myclockdivider|LessThan0~124     ; out0             ;
+; |myclockdivider|LessThan0~126     ; |myclockdivider|LessThan0~126     ; out0             ;
+; |myclockdivider|Add0~0            ; |myclockdivider|Add0~0            ; out0             ;
+; |myclockdivider|Add0~1            ; |myclockdivider|Add0~1            ; out0             ;
+; |myclockdivider|Add0~2            ; |myclockdivider|Add0~2            ; out0             ;
+; |myclockdivider|Add0~3            ; |myclockdivider|Add0~3            ; out0             ;
+; |myclockdivider|Add0~4            ; |myclockdivider|Add0~4            ; out0             ;
+; |myclockdivider|Add0~5            ; |myclockdivider|Add0~5            ; out0             ;
+; |myclockdivider|Add0~6            ; |myclockdivider|Add0~6            ; out0             ;
+; |myclockdivider|Add0~7            ; |myclockdivider|Add0~7            ; out0             ;
+; |myclockdivider|Add0~8            ; |myclockdivider|Add0~8            ; out0             ;
+; |myclockdivider|Add0~9            ; |myclockdivider|Add0~9            ; out0             ;
+; |myclockdivider|Add0~10           ; |myclockdivider|Add0~10           ; out0             ;
+; |myclockdivider|Add0~11           ; |myclockdivider|Add0~11           ; out0             ;
+; |myclockdivider|Add0~12           ; |myclockdivider|Add0~12           ; out0             ;
+; |myclockdivider|Add0~13           ; |myclockdivider|Add0~13           ; out0             ;
+; |myclockdivider|Add0~14           ; |myclockdivider|Add0~14           ; out0             ;
+; |myclockdivider|Add0~15           ; |myclockdivider|Add0~15           ; out0             ;
+; |myclockdivider|Add0~16           ; |myclockdivider|Add0~16           ; out0             ;
+; |myclockdivider|Add0~17           ; |myclockdivider|Add0~17           ; out0             ;
+; |myclockdivider|Add0~18           ; |myclockdivider|Add0~18           ; out0             ;
+; |myclockdivider|Add0~19           ; |myclockdivider|Add0~19           ; out0             ;
+; |myclockdivider|Add0~20           ; |myclockdivider|Add0~20           ; out0             ;
+; |myclockdivider|Add0~21           ; |myclockdivider|Add0~21           ; out0             ;
+; |myclockdivider|Add0~22           ; |myclockdivider|Add0~22           ; out0             ;
+; |myclockdivider|Add0~23           ; |myclockdivider|Add0~23           ; out0             ;
+; |myclockdivider|Add0~24           ; |myclockdivider|Add0~24           ; out0             ;
+; |myclockdivider|Add0~25           ; |myclockdivider|Add0~25           ; out0             ;
+; |myclockdivider|Add0~26           ; |myclockdivider|Add0~26           ; out0             ;
+; |myclockdivider|Add0~27           ; |myclockdivider|Add0~27           ; out0             ;
+; |myclockdivider|Add0~28           ; |myclockdivider|Add0~28           ; out0             ;
+; |myclockdivider|Add0~29           ; |myclockdivider|Add0~29           ; out0             ;
+; |myclockdivider|Add0~30           ; |myclockdivider|Add0~30           ; out0             ;
+; |myclockdivider|Add0~31           ; |myclockdivider|Add0~31           ; out0             ;
+; |myclockdivider|Add0~32           ; |myclockdivider|Add0~32           ; out0             ;
+; |myclockdivider|Add0~33           ; |myclockdivider|Add0~33           ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |myclockdivider|counter~0         ; |myclockdivider|counter~0         ; out              ;
+; |myclockdivider|counter~1         ; |myclockdivider|counter~1         ; out              ;
+; |myclockdivider|counter~2         ; |myclockdivider|counter~2         ; out              ;
+; |myclockdivider|counter~3         ; |myclockdivider|counter~3         ; out              ;
+; |myclockdivider|counter~4         ; |myclockdivider|counter~4         ; out              ;
+; |myclockdivider|counter~5         ; |myclockdivider|counter~5         ; out              ;
+; |myclockdivider|counter~6         ; |myclockdivider|counter~6         ; out              ;
+; |myclockdivider|counter~7         ; |myclockdivider|counter~7         ; out              ;
+; |myclockdivider|counter~8         ; |myclockdivider|counter~8         ; out              ;
+; |myclockdivider|counter~9         ; |myclockdivider|counter~9         ; out              ;
+; |myclockdivider|counter~10        ; |myclockdivider|counter~10        ; out              ;
+; |myclockdivider|counter~11        ; |myclockdivider|counter~11        ; out              ;
+; |myclockdivider|counter~12        ; |myclockdivider|counter~12        ; out              ;
+; |myclockdivider|counter~32        ; |myclockdivider|counter~32        ; out              ;
+; |myclockdivider|counter~33        ; |myclockdivider|counter~33        ; out              ;
+; |myclockdivider|counter~34        ; |myclockdivider|counter~34        ; out              ;
+; |myclockdivider|counter~35        ; |myclockdivider|counter~35        ; out              ;
+; |myclockdivider|counter~36        ; |myclockdivider|counter~36        ; out              ;
+; |myclockdivider|counter~37        ; |myclockdivider|counter~37        ; out              ;
+; |myclockdivider|counter~38        ; |myclockdivider|counter~38        ; out              ;
+; |myclockdivider|counter~39        ; |myclockdivider|counter~39        ; out              ;
+; |myclockdivider|counter~40        ; |myclockdivider|counter~40        ; out              ;
+; |myclockdivider|counter~41        ; |myclockdivider|counter~41        ; out              ;
+; |myclockdivider|counter~42        ; |myclockdivider|counter~42        ; out              ;
+; |myclockdivider|counter~43        ; |myclockdivider|counter~43        ; out              ;
+; |myclockdivider|counter~44        ; |myclockdivider|counter~44        ; out              ;
+; |myclockdivider|counter[19]       ; |myclockdivider|counter[19]       ; regout           ;
+; |myclockdivider|counter[20]       ; |myclockdivider|counter[20]       ; regout           ;
+; |myclockdivider|counter[21]       ; |myclockdivider|counter[21]       ; regout           ;
+; |myclockdivider|counter[22]       ; |myclockdivider|counter[22]       ; regout           ;
+; |myclockdivider|counter[23]       ; |myclockdivider|counter[23]       ; regout           ;
+; |myclockdivider|counter[24]       ; |myclockdivider|counter[24]       ; regout           ;
+; |myclockdivider|counter[25]       ; |myclockdivider|counter[25]       ; regout           ;
+; |myclockdivider|counter[26]       ; |myclockdivider|counter[26]       ; regout           ;
+; |myclockdivider|counter[27]       ; |myclockdivider|counter[27]       ; regout           ;
+; |myclockdivider|counter[28]       ; |myclockdivider|counter[28]       ; regout           ;
+; |myclockdivider|counter[29]       ; |myclockdivider|counter[29]       ; regout           ;
+; |myclockdivider|counter[30]       ; |myclockdivider|counter[30]       ; regout           ;
+; |myclockdivider|counter[31]       ; |myclockdivider|counter[31]       ; regout           ;
+; |myclockdivider|div_clk_count[1]  ; |myclockdivider|div_clk_count[1]  ; out              ;
+; |myclockdivider|div_clk_count[15] ; |myclockdivider|div_clk_count[15] ; out              ;
+; |myclockdivider|div_clk_count[17] ; |myclockdivider|div_clk_count[17] ; out              ;
+; |myclockdivider|div_clk_count[23] ; |myclockdivider|div_clk_count[23] ; out              ;
+; |myclockdivider|div_clk_count[25] ; |myclockdivider|div_clk_count[25] ; out              ;
+; |myclockdivider|div_clk_count[26] ; |myclockdivider|div_clk_count[26] ; out              ;
+; |myclockdivider|div_clk_count[27] ; |myclockdivider|div_clk_count[27] ; out              ;
+; |myclockdivider|div_clk_count[28] ; |myclockdivider|div_clk_count[28] ; out              ;
+; |myclockdivider|div_clk_count[29] ; |myclockdivider|div_clk_count[29] ; out              ;
+; |myclockdivider|div_clk_count[30] ; |myclockdivider|div_clk_count[30] ; out              ;
+; |myclockdivider|div_clk_count[31] ; |myclockdivider|div_clk_count[31] ; out              ;
+; |myclockdivider|Reset             ; |myclockdivider|Reset             ; out              ;
+; |myclockdivider|outclk_Not        ; |myclockdivider|outclk_Not        ; pin_out          ;
+; |myclockdivider|LessThan0~63      ; |myclockdivider|LessThan0~63      ; out0             ;
+; |myclockdivider|LessThan0~71      ; |myclockdivider|LessThan0~71      ; out0             ;
+; |myclockdivider|LessThan0~75      ; |myclockdivider|LessThan0~75      ; out0             ;
+; |myclockdivider|LessThan0~79      ; |myclockdivider|LessThan0~79      ; out0             ;
+; |myclockdivider|LessThan0~83      ; |myclockdivider|LessThan0~83      ; out0             ;
+; |myclockdivider|LessThan0~87      ; |myclockdivider|LessThan0~87      ; out0             ;
+; |myclockdivider|LessThan0~91      ; |myclockdivider|LessThan0~91      ; out0             ;
+; |myclockdivider|LessThan0~93      ; |myclockdivider|LessThan0~93      ; out0             ;
+; |myclockdivider|LessThan0~95      ; |myclockdivider|LessThan0~95      ; out0             ;
+; |myclockdivider|LessThan0~99      ; |myclockdivider|LessThan0~99      ; out0             ;
+; |myclockdivider|LessThan0~101     ; |myclockdivider|LessThan0~101     ; out0             ;
+; |myclockdivider|LessThan0~103     ; |myclockdivider|LessThan0~103     ; out0             ;
+; |myclockdivider|LessThan0~105     ; |myclockdivider|LessThan0~105     ; out0             ;
+; |myclockdivider|LessThan0~107     ; |myclockdivider|LessThan0~107     ; out0             ;
+; |myclockdivider|LessThan0~109     ; |myclockdivider|LessThan0~109     ; out0             ;
+; |myclockdivider|LessThan0~111     ; |myclockdivider|LessThan0~111     ; out0             ;
+; |myclockdivider|LessThan0~113     ; |myclockdivider|LessThan0~113     ; out0             ;
+; |myclockdivider|LessThan0~115     ; |myclockdivider|LessThan0~115     ; out0             ;
+; |myclockdivider|LessThan0~117     ; |myclockdivider|LessThan0~117     ; out0             ;
+; |myclockdivider|LessThan0~119     ; |myclockdivider|LessThan0~119     ; out0             ;
+; |myclockdivider|LessThan0~121     ; |myclockdivider|LessThan0~121     ; out0             ;
+; |myclockdivider|LessThan0~123     ; |myclockdivider|LessThan0~123     ; out0             ;
+; |myclockdivider|LessThan0~125     ; |myclockdivider|LessThan0~125     ; out0             ;
+; |myclockdivider|Add0~35           ; |myclockdivider|Add0~35           ; out0             ;
+; |myclockdivider|Add0~36           ; |myclockdivider|Add0~36           ; out0             ;
+; |myclockdivider|Add0~37           ; |myclockdivider|Add0~37           ; out0             ;
+; |myclockdivider|Add0~38           ; |myclockdivider|Add0~38           ; out0             ;
+; |myclockdivider|Add0~39           ; |myclockdivider|Add0~39           ; out0             ;
+; |myclockdivider|Add0~40           ; |myclockdivider|Add0~40           ; out0             ;
+; |myclockdivider|Add0~41           ; |myclockdivider|Add0~41           ; out0             ;
+; |myclockdivider|Add0~42           ; |myclockdivider|Add0~42           ; out0             ;
+; |myclockdivider|Add0~43           ; |myclockdivider|Add0~43           ; out0             ;
+; |myclockdivider|Add0~44           ; |myclockdivider|Add0~44           ; out0             ;
+; |myclockdivider|Add0~45           ; |myclockdivider|Add0~45           ; out0             ;
+; |myclockdivider|Add0~46           ; |myclockdivider|Add0~46           ; out0             ;
+; |myclockdivider|Add0~47           ; |myclockdivider|Add0~47           ; out0             ;
+; |myclockdivider|Add0~48           ; |myclockdivider|Add0~48           ; out0             ;
+; |myclockdivider|Add0~49           ; |myclockdivider|Add0~49           ; out0             ;
+; |myclockdivider|Add0~50           ; |myclockdivider|Add0~50           ; out0             ;
+; |myclockdivider|Add0~51           ; |myclockdivider|Add0~51           ; out0             ;
+; |myclockdivider|Add0~52           ; |myclockdivider|Add0~52           ; out0             ;
+; |myclockdivider|Add0~53           ; |myclockdivider|Add0~53           ; out0             ;
+; |myclockdivider|Add0~54           ; |myclockdivider|Add0~54           ; out0             ;
+; |myclockdivider|Add0~55           ; |myclockdivider|Add0~55           ; out0             ;
+; |myclockdivider|Add0~56           ; |myclockdivider|Add0~56           ; out0             ;
+; |myclockdivider|Add0~57           ; |myclockdivider|Add0~57           ; out0             ;
+; |myclockdivider|Add0~58           ; |myclockdivider|Add0~58           ; out0             ;
+; |myclockdivider|Add0~59           ; |myclockdivider|Add0~59           ; out0             ;
+; |myclockdivider|Add0~60           ; |myclockdivider|Add0~60           ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |myclockdivider|counter~0         ; |myclockdivider|counter~0         ; out              ;
+; |myclockdivider|counter~1         ; |myclockdivider|counter~1         ; out              ;
+; |myclockdivider|counter~2         ; |myclockdivider|counter~2         ; out              ;
+; |myclockdivider|counter~3         ; |myclockdivider|counter~3         ; out              ;
+; |myclockdivider|counter~4         ; |myclockdivider|counter~4         ; out              ;
+; |myclockdivider|counter~5         ; |myclockdivider|counter~5         ; out              ;
+; |myclockdivider|counter~6         ; |myclockdivider|counter~6         ; out              ;
+; |myclockdivider|counter~7         ; |myclockdivider|counter~7         ; out              ;
+; |myclockdivider|counter~8         ; |myclockdivider|counter~8         ; out              ;
+; |myclockdivider|counter~9         ; |myclockdivider|counter~9         ; out              ;
+; |myclockdivider|counter~10        ; |myclockdivider|counter~10        ; out              ;
+; |myclockdivider|counter~11        ; |myclockdivider|counter~11        ; out              ;
+; |myclockdivider|counter~12        ; |myclockdivider|counter~12        ; out              ;
+; |myclockdivider|counter~13        ; |myclockdivider|counter~13        ; out              ;
+; |myclockdivider|counter~32        ; |myclockdivider|counter~32        ; out              ;
+; |myclockdivider|counter~33        ; |myclockdivider|counter~33        ; out              ;
+; |myclockdivider|counter~34        ; |myclockdivider|counter~34        ; out              ;
+; |myclockdivider|counter~35        ; |myclockdivider|counter~35        ; out              ;
+; |myclockdivider|counter~36        ; |myclockdivider|counter~36        ; out              ;
+; |myclockdivider|counter~37        ; |myclockdivider|counter~37        ; out              ;
+; |myclockdivider|counter~38        ; |myclockdivider|counter~38        ; out              ;
+; |myclockdivider|counter~39        ; |myclockdivider|counter~39        ; out              ;
+; |myclockdivider|counter~40        ; |myclockdivider|counter~40        ; out              ;
+; |myclockdivider|counter~41        ; |myclockdivider|counter~41        ; out              ;
+; |myclockdivider|counter~42        ; |myclockdivider|counter~42        ; out              ;
+; |myclockdivider|counter~43        ; |myclockdivider|counter~43        ; out              ;
+; |myclockdivider|counter~44        ; |myclockdivider|counter~44        ; out              ;
+; |myclockdivider|counter~45        ; |myclockdivider|counter~45        ; out              ;
+; |myclockdivider|counter[18]       ; |myclockdivider|counter[18]       ; regout           ;
+; |myclockdivider|counter[19]       ; |myclockdivider|counter[19]       ; regout           ;
+; |myclockdivider|counter[20]       ; |myclockdivider|counter[20]       ; regout           ;
+; |myclockdivider|counter[21]       ; |myclockdivider|counter[21]       ; regout           ;
+; |myclockdivider|counter[22]       ; |myclockdivider|counter[22]       ; regout           ;
+; |myclockdivider|counter[23]       ; |myclockdivider|counter[23]       ; regout           ;
+; |myclockdivider|counter[24]       ; |myclockdivider|counter[24]       ; regout           ;
+; |myclockdivider|counter[25]       ; |myclockdivider|counter[25]       ; regout           ;
+; |myclockdivider|counter[26]       ; |myclockdivider|counter[26]       ; regout           ;
+; |myclockdivider|counter[27]       ; |myclockdivider|counter[27]       ; regout           ;
+; |myclockdivider|counter[28]       ; |myclockdivider|counter[28]       ; regout           ;
+; |myclockdivider|counter[29]       ; |myclockdivider|counter[29]       ; regout           ;
+; |myclockdivider|counter[30]       ; |myclockdivider|counter[30]       ; regout           ;
+; |myclockdivider|counter[31]       ; |myclockdivider|counter[31]       ; regout           ;
+; |myclockdivider|div_clk_count[1]  ; |myclockdivider|div_clk_count[1]  ; out              ;
+; |myclockdivider|div_clk_count[14] ; |myclockdivider|div_clk_count[14] ; out              ;
+; |myclockdivider|div_clk_count[16] ; |myclockdivider|div_clk_count[16] ; out              ;
+; |myclockdivider|div_clk_count[17] ; |myclockdivider|div_clk_count[17] ; out              ;
+; |myclockdivider|div_clk_count[18] ; |myclockdivider|div_clk_count[18] ; out              ;
+; |myclockdivider|div_clk_count[19] ; |myclockdivider|div_clk_count[19] ; out              ;
+; |myclockdivider|div_clk_count[20] ; |myclockdivider|div_clk_count[20] ; out              ;
+; |myclockdivider|div_clk_count[21] ; |myclockdivider|div_clk_count[21] ; out              ;
+; |myclockdivider|div_clk_count[22] ; |myclockdivider|div_clk_count[22] ; out              ;
+; |myclockdivider|div_clk_count[23] ; |myclockdivider|div_clk_count[23] ; out              ;
+; |myclockdivider|div_clk_count[24] ; |myclockdivider|div_clk_count[24] ; out              ;
+; |myclockdivider|div_clk_count[25] ; |myclockdivider|div_clk_count[25] ; out              ;
+; |myclockdivider|div_clk_count[26] ; |myclockdivider|div_clk_count[26] ; out              ;
+; |myclockdivider|div_clk_count[27] ; |myclockdivider|div_clk_count[27] ; out              ;
+; |myclockdivider|div_clk_count[28] ; |myclockdivider|div_clk_count[28] ; out              ;
+; |myclockdivider|div_clk_count[29] ; |myclockdivider|div_clk_count[29] ; out              ;
+; |myclockdivider|div_clk_count[30] ; |myclockdivider|div_clk_count[30] ; out              ;
+; |myclockdivider|div_clk_count[31] ; |myclockdivider|div_clk_count[31] ; out              ;
+; |myclockdivider|Reset             ; |myclockdivider|Reset             ; out              ;
+; |myclockdivider|outclk_Not        ; |myclockdivider|outclk_Not        ; pin_out          ;
+; |myclockdivider|LessThan0~63      ; |myclockdivider|LessThan0~63      ; out0             ;
+; |myclockdivider|LessThan0~71      ; |myclockdivider|LessThan0~71      ; out0             ;
+; |myclockdivider|LessThan0~75      ; |myclockdivider|LessThan0~75      ; out0             ;
+; |myclockdivider|LessThan0~77      ; |myclockdivider|LessThan0~77      ; out0             ;
+; |myclockdivider|LessThan0~79      ; |myclockdivider|LessThan0~79      ; out0             ;
+; |myclockdivider|LessThan0~81      ; |myclockdivider|LessThan0~81      ; out0             ;
+; |myclockdivider|LessThan0~83      ; |myclockdivider|LessThan0~83      ; out0             ;
+; |myclockdivider|LessThan0~85      ; |myclockdivider|LessThan0~85      ; out0             ;
+; |myclockdivider|LessThan0~87      ; |myclockdivider|LessThan0~87      ; out0             ;
+; |myclockdivider|LessThan0~89      ; |myclockdivider|LessThan0~89      ; out0             ;
+; |myclockdivider|LessThan0~91      ; |myclockdivider|LessThan0~91      ; out0             ;
+; |myclockdivider|LessThan0~93      ; |myclockdivider|LessThan0~93      ; out0             ;
+; |myclockdivider|LessThan0~95      ; |myclockdivider|LessThan0~95      ; out0             ;
+; |myclockdivider|LessThan0~97      ; |myclockdivider|LessThan0~97      ; out0             ;
+; |myclockdivider|LessThan0~99      ; |myclockdivider|LessThan0~99      ; out0             ;
+; |myclockdivider|LessThan0~101     ; |myclockdivider|LessThan0~101     ; out0             ;
+; |myclockdivider|LessThan0~103     ; |myclockdivider|LessThan0~103     ; out0             ;
+; |myclockdivider|LessThan0~105     ; |myclockdivider|LessThan0~105     ; out0             ;
+; |myclockdivider|LessThan0~107     ; |myclockdivider|LessThan0~107     ; out0             ;
+; |myclockdivider|LessThan0~109     ; |myclockdivider|LessThan0~109     ; out0             ;
+; |myclockdivider|LessThan0~111     ; |myclockdivider|LessThan0~111     ; out0             ;
+; |myclockdivider|LessThan0~113     ; |myclockdivider|LessThan0~113     ; out0             ;
+; |myclockdivider|LessThan0~115     ; |myclockdivider|LessThan0~115     ; out0             ;
+; |myclockdivider|LessThan0~117     ; |myclockdivider|LessThan0~117     ; out0             ;
+; |myclockdivider|LessThan0~119     ; |myclockdivider|LessThan0~119     ; out0             ;
+; |myclockdivider|LessThan0~121     ; |myclockdivider|LessThan0~121     ; out0             ;
+; |myclockdivider|LessThan0~123     ; |myclockdivider|LessThan0~123     ; out0             ;
+; |myclockdivider|LessThan0~125     ; |myclockdivider|LessThan0~125     ; out0             ;
+; |myclockdivider|Add0~34           ; |myclockdivider|Add0~34           ; out0             ;
+; |myclockdivider|Add0~35           ; |myclockdivider|Add0~35           ; out0             ;
+; |myclockdivider|Add0~36           ; |myclockdivider|Add0~36           ; out0             ;
+; |myclockdivider|Add0~37           ; |myclockdivider|Add0~37           ; out0             ;
+; |myclockdivider|Add0~38           ; |myclockdivider|Add0~38           ; out0             ;
+; |myclockdivider|Add0~39           ; |myclockdivider|Add0~39           ; out0             ;
+; |myclockdivider|Add0~40           ; |myclockdivider|Add0~40           ; out0             ;
+; |myclockdivider|Add0~41           ; |myclockdivider|Add0~41           ; out0             ;
+; |myclockdivider|Add0~42           ; |myclockdivider|Add0~42           ; out0             ;
+; |myclockdivider|Add0~43           ; |myclockdivider|Add0~43           ; out0             ;
+; |myclockdivider|Add0~44           ; |myclockdivider|Add0~44           ; out0             ;
+; |myclockdivider|Add0~45           ; |myclockdivider|Add0~45           ; out0             ;
+; |myclockdivider|Add0~46           ; |myclockdivider|Add0~46           ; out0             ;
+; |myclockdivider|Add0~47           ; |myclockdivider|Add0~47           ; out0             ;
+; |myclockdivider|Add0~48           ; |myclockdivider|Add0~48           ; out0             ;
+; |myclockdivider|Add0~49           ; |myclockdivider|Add0~49           ; out0             ;
+; |myclockdivider|Add0~50           ; |myclockdivider|Add0~50           ; out0             ;
+; |myclockdivider|Add0~51           ; |myclockdivider|Add0~51           ; out0             ;
+; |myclockdivider|Add0~52           ; |myclockdivider|Add0~52           ; out0             ;
+; |myclockdivider|Add0~53           ; |myclockdivider|Add0~53           ; out0             ;
+; |myclockdivider|Add0~54           ; |myclockdivider|Add0~54           ; out0             ;
+; |myclockdivider|Add0~55           ; |myclockdivider|Add0~55           ; out0             ;
+; |myclockdivider|Add0~56           ; |myclockdivider|Add0~56           ; out0             ;
+; |myclockdivider|Add0~57           ; |myclockdivider|Add0~57           ; out0             ;
+; |myclockdivider|Add0~58           ; |myclockdivider|Add0~58           ; out0             ;
+; |myclockdivider|Add0~59           ; |myclockdivider|Add0~59           ; out0             ;
+; |myclockdivider|Add0~60           ; |myclockdivider|Add0~60           ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu May 22 08:03:47 2025
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off myclockdivider -c myclockdivider
+Info: Using vector source file "C:/Users/Admin/Desktop/ubc/2025S_T1/cpen311/lab/lab1/lab1_template_de1soc/lab1_template_de1soc/myclockdivider.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of myclockdivider.vwf called myclockdivider.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      63.47 %
+Info: Number of transitions in simulation is 27761475
+Info: Vector file myclockdivider.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Thu May 22 08:05:09 2025
+    Info: Elapsed time: 00:01:22
+    Info: Total CPU time (on all processors): 00:01:21
+
+
