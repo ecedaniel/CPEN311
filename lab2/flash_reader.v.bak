@@ -1,0 +1,63 @@
+module flash_reader(
+					clk,
+					reset_all,
+					start,
+					is_read,
+					waitrequest,
+					readdatavalid,
+					state,
+					finish
+					);
+					
+	input clk;
+	input reset_all;
+	input start;
+	input is_read;
+	input waitrequest;
+	input readdatavalid;
+	output [5:0] state;
+	output finish;
+	
+	reg [5:0] state;
+	
+	parameter idle = 6'b00000_0;
+	parameter check_oper = 6'b00010_0;
+	parameter handle_read_op = 6'b00100_0;
+	parameter wait_read = 6'b01000_0;
+	parameter finished = 6'b10000_1;
+	
+	assign finish = state[0];
+	
+	always_ff @(posedge clk or posedge reset_all)
+	begin
+		if (reset_all)
+			state <= idle;
+		else
+			case(state)
+			
+			idle: 
+			if (start) 
+				state <= check_oper;
+					
+			check_oper:
+			if (is_read)
+				state <= handle_read_op;
+			
+			handle_read_op: 
+			if (!waitrequest)
+				state <= wait_read;
+				
+			wait_read:
+			if (!readdatavalid)
+				state <= finished;
+			
+			finished:
+			state <= idle;
+			
+			endcase
+	end
+	
+endmodule
+
+			
+	
