@@ -1,0 +1,176 @@
+// Test_FSM.sv - Test State Machine for RC4 Implementation
+// Controls the sequence: S_Array_Init → Key_Schedule → RC4_Decrypt
+// Implements start-finish protocol and handles invalid message detection
+
+module Test_FSM (
+    input  logic        clk,
+    input  logic        nreset,
+    input  logic        start,
+    output logic        finish,
+    output logic        busy,
+    
+    // S_Array_Init interface
+    output logic        init_start,
+    input  logic        init_finish,
+    
+    // Key_Schedule interface  
+    output logic        ksa_start,
+    input  logic        ksa_finish,
+    
+    // RC4_Decrypt interface
+    output logic        decrypt_start,
+    input  logic        decrypt_finish,
+    input  logic        invalid_message_flag,
+    
+    // FSM Selection Control
+    output logic [1:0]  active_fsm,
+    
+    // Task 3 - Comm with cracking FSM
+    input  logic        crack_ack,           // Ack from cracking FSM
+    output logic        test_message_valid,   // message valid
+    output logic        test_message_invalid, // message invalid
+    
+    // Debug output
+    output logic [7:0]  test_state_debug     // Current state for debugging
+);
+
+    // FSM Selection Parameters
+    parameter FSM_SAI = 2'b00;     // S_Array_Init
+    parameter FSM_TEST = 2'b01;    // Test FSM
+    parameter FSM_KSA = 2'b10;     // Key_Schedule
+    parameter FSM_DECRYPT = 2'b11; // RC4_Decrypt
+
+    // Test state machine parameters
+    parameter TEST_IDLE         =       8'b0001_0000;
+    parameter TEST_START_INIT   =       8'b0010_0001;
+    parameter TEST_WAIT_INIT    =       8'b0011_0001;
+    parameter TEST_START_KSA    =       8'b0100_0001;
+    parameter TEST_WAIT_KSA     =       8'b0101_0001;
+    parameter TEST_START_DECRYPT =      8'b0110_0001;
+    parameter TEST_WAIT_DECRYPT  =      8'b0111_0001;
+    parameter TEST_COMPLETE_VALID =     8'b1000_0011; // Valid message
+    parameter TEST_COMPLETE_INVALID =   8'b1001_0011; // Invalid message
+    
+    logic [7:0] test_state;
+    
+    // Status outputs
+    // assign busy = (test_state != TEST_IDLE);
+    assign busy = test_state[0];
+    assign finish = test_state[1];
+    assign test_state_debug = test_state;  // Debug state output
+    
+    always_ff @(posedge clk) begin
+        if (~nreset) begin
+            test_state <= TEST_IDLE;
+            init_start <= 1'b0;
+            ksa_start <= 1'b0;
+            decrypt_start <= 1'b0;
+            active_fsm <= FSM_SAI;
+            test_message_valid <= 1'b0;
+            test_message_invalid <= 1'b0;
+        end else begin
+            case (test_state)
+                TEST_IDLE: begin
+                    if (start) begin
+                        test_state <= TEST_START_INIT;
+                        init_start <= 1'b1;
+                        active_fsm <= FSM_SAI;
+                        // Clear previous results
+                        test_message_valid <= 1'b0;
+                        test_message_invalid <= 1'b0;
+                    end else begin
+                        init_start <= 1'b0;
+                        ksa_start <= 1'b0;
+                        decrypt_start <= 1'b0;
+                        active_fsm <= FSM_TEST;
+                    end
+                end
+                
+                TEST_START_INIT: begin
+                    init_start <= 1'b0;
+                    test_state <= TEST_WAIT_INIT;
+                    active_fsm <= FSM_SAI;
+                end
+                
+                TEST_WAIT_INIT: begin
+                    if (init_finish) begin
+                        test_state <= TEST_START_KSA;
+                        ksa_start <= 1'b1;
+                        active_fsm <= FSM_KSA;
+                    end else begin
+                        active_fsm <= FSM_SAI;
+                    end
+                end
+                
+                TEST_START_KSA: begin
+                    ksa_start <= 1'b0;
+                    test_state <= TEST_WAIT_KSA;
+                    active_fsm <= FSM_KSA;
+                end
+                
+                TEST_WAIT_KSA: begin
+                    if (ksa_finish) begin
+                        test_state <= TEST_START_DECRYPT;
+                        decrypt_start <= 1'b1;
+                        active_fsm <= FSM_DECRYPT;
+                    end else begin
+                        active_fsm <= FSM_KSA;
+                    end
+                end
+                
+                TEST_START_DECRYPT: begin
+                    decrypt_start <= 1'b0;
+                    test_state <= TEST_WAIT_DECRYPT;
+                    active_fsm <= FSM_DECRYPT;
+                end
+                
+                TEST_WAIT_DECRYPT: begin
+                    if (decrypt_finish) begin
+                        // Check RC4_Decrypt result flags
+                        if (invalid_message_flag) begin
+                            test_state <= TEST_COMPLETE_INVALID;
+                            test_message_invalid <= 1'b1;
+                        end else begin
+                            // If decrypt_finish is high and invalid_message_flag is not set,
+                            // then the message is valid (all characters passed validation)
+                            test_state <= TEST_COMPLETE_VALID;
+                            test_message_valid <= 1'b1;
+                        end
+                        active_fsm <= FSM_TEST;
+                    end else begin
+                        active_fsm <= FSM_DECRYPT;
+                    end
+                end
+
+                TEST_COMPLETE_VALID: begin
+                    // Hold valid result until cracking FSM acknowledges
+                    if (crack_ack) begin
+                        test_message_valid <= 1'b0;
+                        test_state <= TEST_IDLE;  // Ready for next key
+                    end
+                    active_fsm <= FSM_TEST;
+                end
+
+                TEST_COMPLETE_INVALID: begin  
+                    // Hold invalid result until cracking FSM acknowledges
+                    if (crack_ack) begin
+                        test_message_invalid <= 1'b0;
+                        test_state <= TEST_IDLE;  // Ready for next key
+                    end
+                    active_fsm <= FSM_TEST;
+                end
+
+                default: begin
+                    test_state <= TEST_IDLE;
+                    init_start <= 1'b0;
+                    ksa_start <= 1'b0;
+                    decrypt_start <= 1'b0;
+                    test_message_valid <= 1'b0;
+                    test_message_invalid <= 1'b0;
+                    active_fsm <= FSM_SAI;
+                end
+            endcase
+        end
+    end
+
+endmodule 
