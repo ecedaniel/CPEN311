@@ -1,0 +1,293 @@
+Simulator report for keyboard_control
+Mon Jun 02 08:57:07 2025
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 107 nodes    ;
+; Simulation Coverage         ;      64.15 % ;
+; Total Number of Transitions ; 289          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      64.15 % ;
+; Total nodes checked                                 ; 107          ;
+; Total output ports checked                          ; 106          ;
+; Total output ports with complete 1/0-value coverage ; 68           ;
+; Total output ports with no 1/0-value coverage       ; 24           ;
+; Total output ports with no 1-value coverage         ; 34           ;
+; Total output ports with no 0-value coverage         ; 28           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                      ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |keyboard_control|always0~0   ; |keyboard_control|always0~0   ; out0             ;
+; |keyboard_control|state~0     ; |keyboard_control|state~0     ; out              ;
+; |keyboard_control|state~1     ; |keyboard_control|state~1     ; out              ;
+; |keyboard_control|state~2     ; |keyboard_control|state~2     ; out              ;
+; |keyboard_control|state~3     ; |keyboard_control|state~3     ; out              ;
+; |keyboard_control|state~4     ; |keyboard_control|state~4     ; out              ;
+; |keyboard_control|state~5     ; |keyboard_control|state~5     ; out              ;
+; |keyboard_control|state~6     ; |keyboard_control|state~6     ; out              ;
+; |keyboard_control|state~7     ; |keyboard_control|state~7     ; out              ;
+; |keyboard_control|state~8     ; |keyboard_control|state~8     ; out              ;
+; |keyboard_control|state~9     ; |keyboard_control|state~9     ; out              ;
+; |keyboard_control|state~10    ; |keyboard_control|state~10    ; out              ;
+; |keyboard_control|state~11    ; |keyboard_control|state~11    ; out              ;
+; |keyboard_control|state~12    ; |keyboard_control|state~12    ; out              ;
+; |keyboard_control|state~13    ; |keyboard_control|state~13    ; out              ;
+; |keyboard_control|always0~1   ; |keyboard_control|always0~1   ; out0             ;
+; |keyboard_control|state~14    ; |keyboard_control|state~14    ; out              ;
+; |keyboard_control|state~15    ; |keyboard_control|state~15    ; out              ;
+; |keyboard_control|state~16    ; |keyboard_control|state~16    ; out              ;
+; |keyboard_control|state~17    ; |keyboard_control|state~17    ; out              ;
+; |keyboard_control|state~18    ; |keyboard_control|state~18    ; out              ;
+; |keyboard_control|always0~3   ; |keyboard_control|always0~3   ; out0             ;
+; |keyboard_control|state[4]    ; |keyboard_control|state[4]    ; regout           ;
+; |keyboard_control|state[3]    ; |keyboard_control|state[3]    ; regout           ;
+; |keyboard_control|state[2]    ; |keyboard_control|state[2]    ; regout           ;
+; |keyboard_control|state[1]    ; |keyboard_control|state[1]    ; regout           ;
+; |keyboard_control|state[0]    ; |keyboard_control|state[0]    ; regout           ;
+; |keyboard_control|state~19    ; |keyboard_control|state~19    ; out              ;
+; |keyboard_control|state~20    ; |keyboard_control|state~20    ; out              ;
+; |keyboard_control|state~21    ; |keyboard_control|state~21    ; out              ;
+; |keyboard_control|state~22    ; |keyboard_control|state~22    ; out              ;
+; |keyboard_control|state~23    ; |keyboard_control|state~23    ; out              ;
+; |keyboard_control|state~24    ; |keyboard_control|state~24    ; out              ;
+; |keyboard_control|state~25    ; |keyboard_control|state~25    ; out0             ;
+; |keyboard_control|clk         ; |keyboard_control|clk         ; out              ;
+; |keyboard_control|finish      ; |keyboard_control|finish      ; out              ;
+; |keyboard_control|key[1]      ; |keyboard_control|key[1]      ; out              ;
+; |keyboard_control|key[4]      ; |keyboard_control|key[4]      ; out              ;
+; |keyboard_control|start       ; |keyboard_control|start       ; pin_out          ;
+; |keyboard_control|restart     ; |keyboard_control|restart     ; pin_out          ;
+; |keyboard_control|FWD         ; |keyboard_control|FWD         ; pin_out          ;
+; |keyboard_control|Selector0~0 ; |keyboard_control|Selector0~0 ; out0             ;
+; |keyboard_control|Selector0~3 ; |keyboard_control|Selector0~3 ; out0             ;
+; |keyboard_control|Selector0~5 ; |keyboard_control|Selector0~5 ; out0             ;
+; |keyboard_control|Selector1~0 ; |keyboard_control|Selector1~0 ; out0             ;
+; |keyboard_control|Selector1~1 ; |keyboard_control|Selector1~1 ; out0             ;
+; |keyboard_control|Selector1~3 ; |keyboard_control|Selector1~3 ; out0             ;
+; |keyboard_control|Selector1~5 ; |keyboard_control|Selector1~5 ; out0             ;
+; |keyboard_control|Selector2~0 ; |keyboard_control|Selector2~0 ; out0             ;
+; |keyboard_control|Selector2~2 ; |keyboard_control|Selector2~2 ; out0             ;
+; |keyboard_control|Selector2~4 ; |keyboard_control|Selector2~4 ; out0             ;
+; |keyboard_control|Selector2~6 ; |keyboard_control|Selector2~6 ; out0             ;
+; |keyboard_control|Selector2~7 ; |keyboard_control|Selector2~7 ; out0             ;
+; |keyboard_control|Selector3~0 ; |keyboard_control|Selector3~0 ; out0             ;
+; |keyboard_control|Selector3~2 ; |keyboard_control|Selector3~2 ; out0             ;
+; |keyboard_control|Selector3~5 ; |keyboard_control|Selector3~5 ; out0             ;
+; |keyboard_control|Selector4~0 ; |keyboard_control|Selector4~0 ; out0             ;
+; |keyboard_control|Selector4~5 ; |keyboard_control|Selector4~5 ; out0             ;
+; |keyboard_control|Selector4~6 ; |keyboard_control|Selector4~6 ; out0             ;
+; |keyboard_control|Selector5~2 ; |keyboard_control|Selector5~2 ; out0             ;
+; |keyboard_control|Selector5~3 ; |keyboard_control|Selector5~3 ; out0             ;
+; |keyboard_control|Decoder0~1  ; |keyboard_control|Decoder0~1  ; out0             ;
+; |keyboard_control|Decoder0~3  ; |keyboard_control|Decoder0~3  ; out0             ;
+; |keyboard_control|Decoder0~5  ; |keyboard_control|Decoder0~5  ; out0             ;
+; |keyboard_control|Decoder0~6  ; |keyboard_control|Decoder0~6  ; out0             ;
+; |keyboard_control|Equal0~0    ; |keyboard_control|Equal0~0    ; out0             ;
+; |keyboard_control|Equal2~0    ; |keyboard_control|Equal2~0    ; out0             ;
+; |keyboard_control|Equal6~0    ; |keyboard_control|Equal6~0    ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |keyboard_control|always0~2   ; |keyboard_control|always0~2   ; out0             ;
+; |keyboard_control|always0~4   ; |keyboard_control|always0~4   ; out0             ;
+; |keyboard_control|key[0]      ; |keyboard_control|key[0]      ; out              ;
+; |keyboard_control|key[2]      ; |keyboard_control|key[2]      ; out              ;
+; |keyboard_control|key[3]      ; |keyboard_control|key[3]      ; out              ;
+; |keyboard_control|key[5]      ; |keyboard_control|key[5]      ; out              ;
+; |keyboard_control|key[6]      ; |keyboard_control|key[6]      ; out              ;
+; |keyboard_control|key[7]      ; |keyboard_control|key[7]      ; out              ;
+; |keyboard_control|Selector0~1 ; |keyboard_control|Selector0~1 ; out0             ;
+; |keyboard_control|Selector0~2 ; |keyboard_control|Selector0~2 ; out0             ;
+; |keyboard_control|Selector1~2 ; |keyboard_control|Selector1~2 ; out0             ;
+; |keyboard_control|Selector1~4 ; |keyboard_control|Selector1~4 ; out0             ;
+; |keyboard_control|Selector2~1 ; |keyboard_control|Selector2~1 ; out0             ;
+; |keyboard_control|Selector2~3 ; |keyboard_control|Selector2~3 ; out0             ;
+; |keyboard_control|Selector2~5 ; |keyboard_control|Selector2~5 ; out0             ;
+; |keyboard_control|Selector3~1 ; |keyboard_control|Selector3~1 ; out0             ;
+; |keyboard_control|Selector3~3 ; |keyboard_control|Selector3~3 ; out0             ;
+; |keyboard_control|Selector4~1 ; |keyboard_control|Selector4~1 ; out0             ;
+; |keyboard_control|Selector4~2 ; |keyboard_control|Selector4~2 ; out0             ;
+; |keyboard_control|Selector4~3 ; |keyboard_control|Selector4~3 ; out0             ;
+; |keyboard_control|Selector4~4 ; |keyboard_control|Selector4~4 ; out0             ;
+; |keyboard_control|Selector5~0 ; |keyboard_control|Selector5~0 ; out0             ;
+; |keyboard_control|Selector5~1 ; |keyboard_control|Selector5~1 ; out0             ;
+; |keyboard_control|Selector5~4 ; |keyboard_control|Selector5~4 ; out0             ;
+; |keyboard_control|Selector5~5 ; |keyboard_control|Selector5~5 ; out0             ;
+; |keyboard_control|Decoder0~0  ; |keyboard_control|Decoder0~0  ; out0             ;
+; |keyboard_control|Decoder0~2  ; |keyboard_control|Decoder0~2  ; out0             ;
+; |keyboard_control|Equal1~0    ; |keyboard_control|Equal1~0    ; out0             ;
+; |keyboard_control|Equal3~0    ; |keyboard_control|Equal3~0    ; out0             ;
+; |keyboard_control|Equal4~0    ; |keyboard_control|Equal4~0    ; out0             ;
+; |keyboard_control|Equal5~0    ; |keyboard_control|Equal5~0    ; out0             ;
+; |keyboard_control|Equal7~0    ; |keyboard_control|Equal7~0    ; out0             ;
+; |keyboard_control|Equal8~0    ; |keyboard_control|Equal8~0    ; out0             ;
+; |keyboard_control|Equal9~0    ; |keyboard_control|Equal9~0    ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |keyboard_control|always0~2   ; |keyboard_control|always0~2   ; out0             ;
+; |keyboard_control|state[5]    ; |keyboard_control|state[5]    ; regout           ;
+; |keyboard_control|key[3]      ; |keyboard_control|key[3]      ; out              ;
+; |keyboard_control|key[5]      ; |keyboard_control|key[5]      ; out              ;
+; |keyboard_control|key[7]      ; |keyboard_control|key[7]      ; out              ;
+; |keyboard_control|Selector0~1 ; |keyboard_control|Selector0~1 ; out0             ;
+; |keyboard_control|Selector0~2 ; |keyboard_control|Selector0~2 ; out0             ;
+; |keyboard_control|Selector0~4 ; |keyboard_control|Selector0~4 ; out0             ;
+; |keyboard_control|Selector1~2 ; |keyboard_control|Selector1~2 ; out0             ;
+; |keyboard_control|Selector1~4 ; |keyboard_control|Selector1~4 ; out0             ;
+; |keyboard_control|Selector2~3 ; |keyboard_control|Selector2~3 ; out0             ;
+; |keyboard_control|Selector2~5 ; |keyboard_control|Selector2~5 ; out0             ;
+; |keyboard_control|Selector3~3 ; |keyboard_control|Selector3~3 ; out0             ;
+; |keyboard_control|Selector3~4 ; |keyboard_control|Selector3~4 ; out0             ;
+; |keyboard_control|Selector4~1 ; |keyboard_control|Selector4~1 ; out0             ;
+; |keyboard_control|Selector4~2 ; |keyboard_control|Selector4~2 ; out0             ;
+; |keyboard_control|Selector4~3 ; |keyboard_control|Selector4~3 ; out0             ;
+; |keyboard_control|Selector4~4 ; |keyboard_control|Selector4~4 ; out0             ;
+; |keyboard_control|Selector5~4 ; |keyboard_control|Selector5~4 ; out0             ;
+; |keyboard_control|Selector5~5 ; |keyboard_control|Selector5~5 ; out0             ;
+; |keyboard_control|Decoder0~2  ; |keyboard_control|Decoder0~2  ; out0             ;
+; |keyboard_control|Decoder0~4  ; |keyboard_control|Decoder0~4  ; out0             ;
+; |keyboard_control|Equal1~0    ; |keyboard_control|Equal1~0    ; out0             ;
+; |keyboard_control|Equal3~0    ; |keyboard_control|Equal3~0    ; out0             ;
+; |keyboard_control|Equal4~0    ; |keyboard_control|Equal4~0    ; out0             ;
+; |keyboard_control|Equal5~0    ; |keyboard_control|Equal5~0    ; out0             ;
+; |keyboard_control|Equal7~0    ; |keyboard_control|Equal7~0    ; out0             ;
+; |keyboard_control|Equal9~0    ; |keyboard_control|Equal9~0    ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Jun 02 08:57:07 2025
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off keyboard_control -c keyboard_control
+Info: Using vector source file "C:/Users/Admin/Desktop/lab2/lab2_template_de1soc/template_de1soc/keyboard_control.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of keyboard_control.vwf called keyboard_control.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      64.15 %
+Info: Number of transitions in simulation is 289
+Info: Vector file keyboard_control.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 160 megabytes
+    Info: Processing ended: Mon Jun 02 08:57:07 2025
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

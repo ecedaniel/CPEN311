@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Sun Jun 01 10:39:00 2025
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : speed_control
+Top-level Entity Name : speed_control
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 39
+    Dedicated logic registers : 32
+Total registers : 32
+Total pins : 36
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0
