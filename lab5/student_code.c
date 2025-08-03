@@ -1,0 +1,72 @@
+/*
+ * student_code.c
+ *
+ *  Created on: Mar 7, 2017
+ *      Author: user
+ */
+
+#include <system.h>
+#include <io.h>
+#include "sys/alt_irq.h"
+#include "student_code.h"
+#include "altera_avalon_pio_regs.h"
+
+#ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
+void handle_lfsr_interrupts(void* context)
+#else
+void handle_lfsr_interrupts(void* context, alt_u32 id)
+#endif
+{
+	#ifdef LFSR_VAL_BASE
+	#ifdef LFSR_CLK_INTERRUPT_GEN_BASE
+	#ifdef DDS_INCREMENT_BASE
+	
+	// Read the current LFSR value from PIO DATA
+	alt_u32 lfsr_val = IORD_ALTERA_AVALON_PIO_DATA(LFSR_VAL_BASE);
+	
+	// Pre-calculated tuning words for FSK frequencies
+	// For 1 Hz: (1 * 2^32) / 50,000,000 = 85.899 ~ 86
+	// For 5 Hz: (5 * 2^32) / 50,000,000 = 429.497 ~ 429
+	alt_u32 tuning_1hz = 86;
+	alt_u32 tuning_5hz = 429;
+	
+	// Verifying if the bit is 0 or 1.
+	if (lfsr_val & 0x1) {
+		// If LFSR[0] == 1 then DDS_INCREMENT_BASE = 429
+		IOWR_ALTERA_AVALON_PIO_DATA(DDS_INCREMENT_BASE, tuning_5hz);
+	} else {
+		// If LFSR[0] == 0 then DDS_INCREMENT_BASE = 86 
+		IOWR_ALTERA_AVALON_PIO_DATA(DDS_INCREMENT_BASE, tuning_1hz);
+	}
+	
+	// Clear the edge capture register to acknowledge the interrupt
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(LFSR_CLK_INTERRUPT_GEN_BASE, 0);
+	
+	#endif
+	#endif
+	#endif
+}
+
+/* Initialize the button_pio. */
+
+void init_lfsr_interrupt()
+{
+	#ifdef LFSR_VAL_BASE
+	#ifdef LFSR_CLK_INTERRUPT_GEN_BASE
+	#ifdef DDS_INCREMENT_BASE
+	
+	/* Enable interrupts */
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(LFSR_CLK_INTERRUPT_GEN_BASE, 0x1);
+	/* Reset the edge capture register. */
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(LFSR_CLK_INTERRUPT_GEN_BASE, 0x0);
+	/* Register the interrupt handler. */
+#ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
+	alt_ic_isr_register(LFSR_CLK_INTERRUPT_GEN_IRQ_INTERRUPT_CONTROLLER_ID, LFSR_CLK_INTERRUPT_GEN_IRQ, handle_lfsr_interrupts, 0x0, 0x0);
+#else
+	alt_irq_register( LFSR_CLK_INTERRUPT_GEN_IRQ, NULL,	handle_lfsr_interrupts);
+#endif
+	
+	#endif
+	#endif
+	#endif
+}

@@ -1,0 +1,81 @@
+module LFSR_5bit #(
+    parameter [4:0] SEED = 5'b00001  // Default seed value (must be non-zero)
+)(
+    input clk,
+    input rst,
+    output reg [4:0] lfsr
+);
+
+    logic feedback;
+    assign feedback = lfsr[0] ^ lfsr[2];
+    reg_chain #(.LENGTH(4), .SEED({SEED[0], SEED[1], SEED[2], SEED[3]})) reg_chain_inst (
+        .clk(clk),
+        .rst(rst),
+        .D_input(lfsr[4]),
+        .chain_output({lfsr[0], lfsr[1], lfsr[2], lfsr[3]})
+    );
+
+    flipflop #(.WIDTH(1), .RESET_VALUE(SEED[4])) ff_feedback (
+        .clk(clk),
+        .reset(rst),
+        .D(feedback),
+        .Q(lfsr[4])
+    );
+
+endmodule
+
+module reg_chain #(
+    parameter int LENGTH = 4,
+    parameter [LENGTH-1:0] SEED = {LENGTH{1'b0}}
+)(
+    input  logic                 clk,
+    input  logic                 rst,
+    input  logic                 D_input,
+    output logic [LENGTH-1:0]    chain_output
+);
+
+logic [LENGTH-1:0] q_chain;
+assign chain_output = q_chain;
+
+genvar i;
+generate
+    for (i = 0; i < LENGTH; i++) begin : ff_chain
+        if (i == 0) begin
+            flipflop #(.WIDTH(1), .RESET_VALUE(SEED[i])) ff_i (
+                .clk(clk),
+                .reset(rst),
+                .D(D_input),
+                .Q(q_chain[i])
+            );
+        end
+        else begin
+            flipflop #(.WIDTH(1), .RESET_VALUE(SEED[i])) ff_i (
+                .clk(clk),
+                .reset(rst),
+                .D(q_chain[i-1]),
+                .Q(q_chain[i])
+            );
+        end
+    end
+endgenerate
+endmodule
+
+module flipflop #(
+    parameter WIDTH = 1,
+    parameter [WIDTH-1:0] RESET_VALUE = {WIDTH{1'b0}}
+)(
+    input logic clk,
+    input logic reset,
+    input logic [WIDTH-1:0] D,
+    output logic [WIDTH-1:0] Q
+);
+    // reset is asynchronous active high (posedge reset).
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            Q <= RESET_VALUE;
+        end
+        else begin
+            Q <= D;
+        end 
+    end
+endmodule
