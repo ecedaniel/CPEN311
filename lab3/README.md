@@ -1,6 +1,5 @@
-# 🎵 Simple iPod with Embedded PicoBlaze Processor
-**Course:** CPEN 311 – Digital Systems Design  
-**University:** University of British Columbia (UBC)  
+# FPGA Music Player with Embedded PicoBlaze Processor
+
 **Author:** Daniel Kim  
 **Hardware:** DE1-SoC FPGA Board (Altera/Intel Cyclone V)
 
