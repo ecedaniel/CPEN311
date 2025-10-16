@@ -64,7 +64,3 @@ The PicoBlaze interrupt routine computes the **average of 256 absolute sample va
 - Demonstrates embedded DSP principles using integer arithmetic.
 
 ---
-
-
-
-> “From transistors to software — bridging hardware and computation through design.”
