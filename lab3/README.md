@@ -1,10 +1,5 @@
 # FPGA Music Player with Embedded PicoBlaze Processor
 
-**Author:** Daniel Kim  
-**Hardware:** DE1-SoC FPGA Board (Altera/Intel Cyclone V)
-
----
-
 ## 🧩 Project Overview
 This project implements a **Simple iPod system** on an FPGA board using Verilog HDL.  
 It interfaces with on-board **Flash memory**, a **keyboard**, and **audio output**, and integrates an **embedded PicoBlaze processor** to perform **real-time digital signal processing (DSP)** — specifically, an **averaging filter** that measures signal strength and displays it on LEDs.
